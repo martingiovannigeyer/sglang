@@ -1620,6 +1620,13 @@ class ServerArgs:
         bool,
         "Inkling: replace the attention/MLP output all-reduce with a hidden-dimension reduce-scatter, run the channelwise output short convolution on the [T, H/P] shard, then all-gather before the residual add. This shards the convolution cache across tensor-parallel ranks without changing communication volume.",
     ] = False
+    disable_trtllm_moe_pdl: A[
+        bool,
+        Arg(
+            help="Launch the flashinfer trtllm-gen MoE kernels without PDL (programmatic dependent launch). Off by default (PDL on); the Inkling model override pins this on because with PDL the chain occasionally never completes when a captured graph replays it concurrently with the shared-expert stream, hanging the whole TP group at its next collective.",
+            resolvable=True,
+        ),
+    ] = False
     pre_warm_nccl: A[
         bool,
         "Pre-warm NCCL/RCCL communicators during startup to reduce P99 TTFT cold-start latency. Default: enabled for AMD/HIP (RCCL), disabled for NVIDIA/CUDA (NCCL).",

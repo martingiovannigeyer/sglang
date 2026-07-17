@@ -857,6 +857,9 @@ def _inkling_overrides(server_args: Any, hf_config: Any) -> dict:
     # Inkling, so pin it here. Yields to an explicit --mamba-scheduler-strategy.
     if server_args.mamba_radix_cache_strategy == ServerArgs.mamba_radix_cache_strategy:
         overrides["mamba_radix_cache_strategy"] = "extra_buffer"
+    # Pinned: with PDL, the trtllm-gen MoE chain can wedge forever when the
+    # two-stream shared-expert overlap replays it concurrently (TP-wide hang).
+    overrides["disable_trtllm_moe_pdl"] = True
     envs.SGLANG_ENABLE_UNIFIED_RADIX_TREE.set(True)
     return overrides
 
