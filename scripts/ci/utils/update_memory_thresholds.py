@@ -66,16 +66,18 @@ PR_TEST_WORKFLOW = "pr-test.yml"
 NIGHTLY_WORKFLOW = "nightly-test-nvidia.yml"
 
 # GHA log prefix: "job-name\tSTEP\t2026-...\tactual line"
-# Job name often contains the suite: "base-b-test-1-gpu-small / base-b-test-1-gpu-small (1)"
+# Match both relative and absolute checkout paths for the test entrypoint.
 TEST_START_RE = re.compile(
-    r"python3\s+(?:\S+/)?(?P<path>test/(?:registered|manual)/\S+\.py)"
-)
-# Also match absolute CI checkout paths
-TEST_START_ABS_RE = re.compile(
-    r"python3\s+\S*?/(?P<path>test/(?:registered|manual)/\S+\.py)"
+    r"python3\s+(?:\S*?/)?(?P<path>test/(?:registered|manual)/\S+\.py)"
 )
 FILENAME_END_RE = re.compile(
     r"filename=['\"]?(?:\S+/)?(?P<path>test/(?:registered|manual)/\S+\.py)"
+)
+# Prefer the real suite from `run_suite.py --suite <name>` — job display names
+# often differ (e.g. job nightly-test-general-1-gpu-h100 runs --suite nightly-1-gpu;
+# call-pr-test-extra / extra-a-test-... wraps the suite in the workflow job name).
+SUITE_FROM_RUN_SUITE_RE = re.compile(
+    r"run_suite\.py\b[^\n]*?--suite\s+(?P<suite>[^\s\\]+)"
 )
 SUITE_FROM_JOB_RE = re.compile(
     r"(?P<suite>"
@@ -115,12 +117,7 @@ class Aggregate:
         for k, vals in by_field.items():
             floor = mean_floor(vals, factor=factor)
             # Integer pool sizes / token counts: floor then int()
-            if k.endswith("_gb") or k in (
-                "kv_cache_gb",
-                "swa_mem_gb",
-                "mamba_conv_gb",
-                "mamba_ssm_gb",
-            ):
+            if k.endswith("_gb"):
                 out[k] = round(floor, 4)
             else:
                 out[k] = int(floor)
@@ -205,23 +202,32 @@ def download_job_log(job_id: int | str, dest: Path) -> bool:
     return True
 
 
-def suite_from_job_name(job_name: str) -> str:
-    """Extract suite token from a GHA job name.
-
-    Examples:
-      'base-b-test-1-gpu-small / base-b-test-1-gpu-small (1)' -> base-b-test-1-gpu-small
-      'nightly-test-general-8-gpu-b200 (0)' -> nightly-test-general-8-gpu-b200
-    """
-    # Prefer the left side of " / " when present (matrix job display name).
-    head = job_name.split(" / ")[0].strip()
-    # Strip trailing partition " (N)"
-    head = re.sub(r"\s*\(\d+\)\s*$", "", head)
-    m = SUITE_FROM_JOB_RE.search(head)
+def suite_from_run_suite_log(text: str) -> Optional[str]:
+    """Parse ``run_suite.py --suite <name>`` from a job log (preferred key)."""
+    m = SUITE_FROM_RUN_SUITE_RE.search(text)
     if m:
-        return m.group("suite")
-    # Nightly jobs use nightly-test-* naming; map to a stable key.
-    if head.startswith("nightly-test-"):
-        return head
+        return m.group("suite").strip()
+    return None
+
+
+def suite_from_job_name(job_name: str) -> str:
+    """Fallback suite token from a GHA job display name.
+
+    Prefer :func:`suite_from_run_suite_log` — job names often disagree with
+    ``--suite`` (nightly job names, ``call-pr-test-extra / ...`` wrappers).
+
+    Examples when the job *is* the suite:
+      'base-b-test-1-gpu-small / base-b-test-1-gpu-small (1)' -> base-b-test-1-gpu-small
+    """
+    # Prefer the rightmost segment that looks like a suite (handles
+    # 'call-pr-test-extra / extra-a-test-1-gpu-small / extra-a-test-1-gpu-small (0)').
+    parts = [p.strip() for p in job_name.split(" / ")]
+    for part in reversed(parts):
+        head = re.sub(r"\s*\(\d+\)\s*$", "", part).strip()
+        m = SUITE_FROM_JOB_RE.search(head)
+        if m:
+            return m.group("suite")
+    head = re.sub(r"\s*\(\d+\)\s*$", "", parts[0] if parts else job_name).strip()
     return head or "_unknown_suite"
 
 
@@ -233,6 +239,9 @@ def parse_job_log(
     job_id: str,
 ) -> List[LaunchObservation]:
     """Associate memory snapshots with the currently running test file."""
+    # Override the caller-provided suite if the log records run_suite --suite.
+    suite = suite_from_run_suite_log(text) or suite
+
     current_test: Optional[str] = None
     # Buffer raw log text per test file, then extract snapshots once the next
     # test starts (or at EOF). This keeps multi-line / multi-TP launches ordered.
@@ -240,7 +249,7 @@ def parse_job_log(
     test_order: List[str] = []
 
     for line in text.splitlines():
-        m = TEST_START_RE.search(line) or TEST_START_ABS_RE.search(line)
+        m = TEST_START_RE.search(line)
         if m:
             current_test = normalize_test_file(m.group("path"))
             if current_test not in buffers:
@@ -459,6 +468,15 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     if args.log_dir:
         observations = collect_from_log_dir(args.log_dir)
     else:
+        import shutil
+
+        if not shutil.which("gh"):
+            print(
+                "Error: the 'gh' (GitHub) CLI is required but was not found in PATH.\n"
+                "Install it and run 'gh auth login' to authenticate.",
+                file=sys.stderr,
+            )
+            return 1
         run_ids = args.run_id or resolve_default_run_ids(args.limit_runs)
         if not run_ids:
             print("No runs found.", file=sys.stderr)

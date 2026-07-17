@@ -169,14 +169,15 @@ def extract_snapshots_from_log(text: str) -> List[Dict[str, float]]:
             raw[-1] = {**raw[-1], **snap}
         else:
             raw.append(dict(snap))
-    return _collapse_hybrid_subpools(raw)
+    return _collapse_to_server_launches(raw)
 
 
 def _can_merge(a: Dict[str, float], b: Dict[str, float]) -> bool:
-    # Two pure-KV snaps with different sizes are distinct server launches
-    # (e.g. EAGLE draft vs target). Only collapse exact TP duplicates.
+    # Two pure-KV snaps with different sizes are not merged here; post-pass
+    # collapses draft/target pairs that share token_capacity. Exact TP
+    # duplicates are already filtered by fingerprint above.
     if _is_kv_only(a) and _is_kv_only(b):
-        return _fingerprint(a) == _fingerprint(b)
+        return False
     for k in b:
         if k in a and a[k] != b[k]:
             # token_capacity / kv_cache_gb differ across SWA full vs swa
@@ -191,14 +192,17 @@ def _is_kv_only(snap: Dict[str, float]) -> bool:
     return set(snap.keys()).issubset({"token_capacity", "kv_cache_gb"})
 
 
-def _collapse_hybrid_subpools(
+def _collapse_to_server_launches(
     snaps: List[Dict[str, float]],
 ) -> List[Dict[str, float]]:
-    """Drop pure-KV snaps that are SWA sub-pools of a following SWAKVPool line.
+    """Collapse log lines into one snapshot per ``popen_launch_server``.
 
-    Hybrid SWA logs emit two ``KV Cache is allocated`` lines (swa + full) plus
-    one ``SWAKVPool mem usage`` summary for a *single* server process. Runtime
-    checks only see one /server_info snapshot, so floors must match that.
+    Runtime checks ``GET /server_info`` once per process. Logs often emit more:
+
+    * Hybrid SWA: two sub-pool ``KV Cache is allocated`` lines + ``SWAKVPool``.
+    * Speculative (EAGLE): target + draft pure-KV lines (same token_capacity,
+      different kv_cache_gb). ``/server_info`` reports the target pool only —
+      keep the larger kv_cache_gb.
     """
     if not snaps:
         return snaps
@@ -223,6 +227,24 @@ def _collapse_hybrid_subpools(
                     continue
                 kept.append(prev)
             out = kept
+            out.append(snap)
+            continue
+
+        # Draft/target pure-KV pair: same token_capacity, keep larger GB.
+        if (
+            out
+            and _is_kv_only(out[-1])
+            and _is_kv_only(snap)
+            and out[-1].get("token_capacity") == snap.get("token_capacity")
+            and out[-1].get("token_capacity") is not None
+        ):
+            prev = out[-1]
+            if float(snap.get("kv_cache_gb", 0.0)) > float(
+                prev.get("kv_cache_gb", 0.0)
+            ):
+                out[-1] = dict(snap)
+            continue
+
         out.append(snap)
     return out
 
@@ -236,7 +258,7 @@ def snapshot_from_server_info(info: Dict[str, Any]) -> Dict[str, float]:
 
     mem = None
     internal = info.get("internal_states")
-    if isinstance(internal, list) and internal:
+    if isinstance(internal, list) and internal and isinstance(internal[0], dict):
         mem = internal[0].get("memory_usage")
     if not isinstance(mem, dict):
         mem = info.get("memory_usage")

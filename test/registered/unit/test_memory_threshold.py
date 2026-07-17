@@ -102,16 +102,35 @@ KV Cache is allocated. dtype: torch.bfloat16, #tokens: 12000, K size: 0.07 GB, V
         self.assertEqual(snaps[0]["token_capacity"], 12000)
         self.assertAlmostEqual(snaps[0]["kv_cache_gb"], 0.14)
 
-    def test_eagle_draft_target_kept_separate(self):
-        """Draft and target are two server launches (same tokens, different GB)."""
+    def test_eagle_draft_target_collapsed_to_one_launch(self):
+        """One popen_launch_server: target+draft KV lines → one /server_info floor.
+
+        Draft shares token_capacity with a smaller kv_cache_gb; runtime only
+        reports the target pool, so keep the larger GB.
+        """
         text = """
 KV Cache is allocated. dtype: torch.bfloat16, #tokens: 33767, K size: 4.12 GB, V size: 4.12 GB
 KV Cache is allocated. dtype: torch.bfloat16, #tokens: 33767, K size: 0.07 GB, V size: 0.07 GB
 """
         snaps = extract_snapshots_from_log(text)
-        self.assertEqual(len(snaps), 2)
+        self.assertEqual(len(snaps), 1)
+        self.assertEqual(snaps[0]["token_capacity"], 33767)
         self.assertAlmostEqual(snaps[0]["kv_cache_gb"], 8.24)
-        self.assertAlmostEqual(snaps[1]["kv_cache_gb"], 0.14)
+
+    def test_two_real_eagle_launches_kept_separate(self):
+        """Two server processes: target+draft each → two floors (target only)."""
+        text = """
+KV Cache is allocated. dtype: torch.bfloat16, #tokens: 72610, K size: 4.44 GB, V size: 4.44 GB
+KV Cache is allocated. dtype: torch.bfloat16, #tokens: 72610, K size: 0.14 GB, V size: 0.14 GB
+KV Cache is allocated. dtype: torch.bfloat16, #tokens: 15685, K size: 3.83 GB, V size: 3.83 GB
+KV Cache is allocated. dtype: torch.bfloat16, #tokens: 15685, K size: 0.12 GB, V size: 0.12 GB
+"""
+        snaps = extract_snapshots_from_log(text)
+        self.assertEqual(len(snaps), 2)
+        self.assertEqual(snaps[0]["token_capacity"], 72610)
+        self.assertAlmostEqual(snaps[0]["kv_cache_gb"], 8.88)
+        self.assertEqual(snaps[1]["token_capacity"], 15685)
+        self.assertAlmostEqual(snaps[1]["kv_cache_gb"], 7.66)
 
 
 class TestServerInfoSnapshot(CustomTestCase):

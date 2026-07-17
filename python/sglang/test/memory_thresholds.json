@@ -18,7 +18,7 @@
       "dsv4_c128_state"
     ],
     "note": "Floors are mean(samples)*factor. Runtime check uses GET /server_info and requires observed >= floor for each present field.",
-    "updated_at": "2026-07-17T08:37:26Z"
+    "updated_at": "2026-07-17T08:53:01Z"
   },
   "base-a-test-1-gpu-small::test/registered/core/test_basic_sanity.py": {
     "launches": [
@@ -38,14 +38,9 @@
       {
         "kv_cache_gb": 3.7422,
         "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 0.5742,
-        "token_capacity": 30583
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-a-test-1-gpu-small",
@@ -56,14 +51,9 @@
       {
         "kv_cache_gb": 4.3296,
         "token_capacity": 35487
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 35487
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-a-test-1-gpu-small",
@@ -105,14 +95,9 @@
       {
         "kv_cache_gb": 21.0276,
         "token_capacity": 137849
-      },
-      {
-        "kv_cache_gb": 2.6334,
-        "token_capacity": 137849
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -190,10 +175,6 @@
         "token_capacity": 297354
       },
       {
-        "kv_cache_gb": 1.1352,
-        "token_capacity": 297354
-      },
-      {
         "kv_cache_gb": 35.6796,
         "token_capacity": 1231659
       },
@@ -207,7 +188,6 @@
       }
     ],
     "sample_counts": [
-      3,
       3,
       3,
       3,
@@ -267,14 +247,9 @@
       {
         "kv_cache_gb": 36.1449,
         "token_capacity": 1122992
-      },
-      {
-        "kv_cache_gb": 1.2078,
-        "token_capacity": 1122992
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -285,14 +260,9 @@
       {
         "kv_cache_gb": 36.1449,
         "token_capacity": 1123046
-      },
-      {
-        "kv_cache_gb": 1.2078,
-        "token_capacity": 1123046
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -316,14 +286,9 @@
       {
         "kv_cache_gb": 36.1053,
         "token_capacity": 1121649
-      },
-      {
-        "kv_cache_gb": 1.2078,
-        "token_capacity": 1121649
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -472,14 +437,9 @@
       {
         "kv_cache_gb": 36.3132,
         "token_capacity": 297200
-      },
-      {
-        "kv_cache_gb": 1.1352,
-        "token_capacity": 297200
       }
     ],
     "sample_counts": [
-      3,
       3,
       3,
       3
@@ -531,24 +491,9 @@
       {
         "kv_cache_gb": 39.7386,
         "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 1.2474,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 39.7386,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 1.2474,
-        "token_capacity": 81399
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -559,24 +504,9 @@
       {
         "kv_cache_gb": 43.5204,
         "token_capacity": 89123
-      },
-      {
-        "kv_cache_gb": 1.3662,
-        "token_capacity": 89123
-      },
-      {
-        "kv_cache_gb": 43.5204,
-        "token_capacity": 89123
-      },
-      {
-        "kv_cache_gb": 1.3662,
-        "token_capacity": 89123
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -589,21 +519,11 @@
         "token_capacity": 389919
       },
       {
-        "kv_cache_gb": 1.485,
-        "token_capacity": 389919
-      },
-      {
         "kv_cache_gb": 39.8376,
-        "token_capacity": 81354
-      },
-      {
-        "kv_cache_gb": 1.2474,
         "token_capacity": 81354
       }
     ],
     "sample_counts": [
-      3,
-      3,
       3,
       3
     ],
@@ -619,14 +539,9 @@
       {
         "kv_cache_gb": 47.7312,
         "token_capacity": 391024
-      },
-      {
-        "kv_cache_gb": 1.4982,
-        "token_capacity": 391024
       }
     ],
     "sample_counts": [
-      3,
       3,
       3
     ],
@@ -640,23 +555,11 @@
         "token_capacity": 389919
       },
       {
-        "kv_cache_gb": 1.485,
-        "token_capacity": 389919
-      },
-      {
         "kv_cache_gb": 0.5346,
         "token_capacity": 4455
       },
       {
-        "kv_cache_gb": 0.0198,
-        "token_capacity": 4455
-      },
-      {
         "kv_cache_gb": 39.7386,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 1.2474,
         "token_capacity": 81399
       },
       {
@@ -664,34 +567,11 @@
         "token_capacity": 4455
       },
       {
-        "kv_cache_gb": 0.0594,
-        "token_capacity": 4455
-      },
-      {
         "kv_cache_gb": 39.7386,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 1.2474,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 39.7386,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 1.2474,
         "token_capacity": 81399
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
       3,
       3,
       3,
@@ -735,34 +615,9 @@
       {
         "kv_cache_gb": 24.7896,
         "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 6.1974,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 24.7896,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 6.1974,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 24.7896,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 6.1974,
-        "token_capacity": 203048
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
       3
     ],
     "suite": "base-b-test-1-gpu-large",
@@ -1122,15 +977,7 @@
         "token_capacity": 36348
       },
       {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 36348
-      },
-      {
         "kv_cache_gb": 7.6626,
-        "token_capacity": 15687
-      },
-      {
-        "kv_cache_gb": 0.2376,
         "token_capacity": 15687
       },
       {
@@ -1143,8 +990,6 @@
       }
     ],
     "sample_counts": [
-      3,
-      3,
       3,
       3,
       3,
@@ -1421,60 +1266,15 @@
         "token_capacity": 30583
       },
       {
-        "kv_cache_gb": 0.5742,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 3.7422,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 0.5742,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 3.7422,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 0.5742,
-        "token_capacity": 30583
-      },
-      {
         "kv_cache_gb": 3.7422,
         "token_capacity": 30412
       },
       {
-        "kv_cache_gb": 0.594,
-        "token_capacity": 30412
-      },
-      {
         "kv_cache_gb": 3.7422,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 0.5742,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 3.7422,
-        "token_capacity": 30583
-      },
-      {
-        "kv_cache_gb": 0.5742,
         "token_capacity": 30583
       }
     ],
     "sample_counts": [
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
-      2,
       2,
       2,
       2
@@ -1489,23 +1289,13 @@
         "token_capacity": 72657
       },
       {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 72657
-      },
-      {
         "kv_cache_gb": 8.8704,
-        "token_capacity": 72657
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 72657
+        "token_capacity": 72658
       }
     ],
     "sample_counts": [
       4,
-      4,
-      4,
-      4
+      1
     ],
     "suite": "base-b-test-1-gpu-small",
     "test_file": "test/registered/spec/eagle/test_spec_eagle.py"
@@ -1517,21 +1307,11 @@
         "token_capacity": 71639
       },
       {
-        "kv_cache_gb": 0.2706,
-        "token_capacity": 71639
-      },
-      {
         "kv_cache_gb": 7.6626,
-        "token_capacity": 15685
-      },
-      {
-        "kv_cache_gb": 0.2376,
         "token_capacity": 15685
       }
     ],
     "sample_counts": [
-      3,
-      3,
       3,
       3
     ],
@@ -1545,39 +1325,15 @@
         "token_capacity": 71674
       },
       {
-        "kv_cache_gb": 0.2706,
-        "token_capacity": 71674
+        "kv_cache_gb": 8.3622,
+        "token_capacity": 52807
       },
       {
-        "kv_cache_gb": 8.7648,
-        "token_capacity": 71797
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 71797
-      },
-      {
-        "kv_cache_gb": 7.6626,
-        "token_capacity": 15687
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 15687
-      },
-      {
-        "kv_cache_gb": 7.6626,
-        "token_capacity": 15687
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 15687
+        "kv_cache_gb": 6.4152,
+        "token_capacity": 21140
       },
       {
         "kv_cache_gb": 3.9204,
-        "token_capacity": 32047
-      },
-      {
-        "kv_cache_gb": 0.1188,
         "token_capacity": 32047
       }
     ],
@@ -1585,13 +1341,7 @@
       3,
       3,
       3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3
+      2
     ],
     "suite": "base-b-test-1-gpu-small",
     "test_file": "test/registered/spec/eagle/test_spec_eagle_topk.py"
@@ -1603,21 +1353,11 @@
         "token_capacity": 72610
       },
       {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 72610
-      },
-      {
         "kv_cache_gb": 7.6626,
-        "token_capacity": 15685
-      },
-      {
-        "kv_cache_gb": 0.2376,
         "token_capacity": 15685
       }
     ],
     "sample_counts": [
-      3,
-      3,
       3,
       3
     ],
@@ -1631,21 +1371,11 @@
         "token_capacity": 71674
       },
       {
-        "kv_cache_gb": 0.2706,
-        "token_capacity": 71674
-      },
-      {
         "kv_cache_gb": 7.6626,
-        "token_capacity": 15687
-      },
-      {
-        "kv_cache_gb": 0.2376,
         "token_capacity": 15687
       }
     ],
     "sample_counts": [
-      3,
-      3,
       3,
       3
     ],
@@ -1717,14 +1447,9 @@
       {
         "kv_cache_gb": 16.6716,
         "token_capacity": 364288
-      },
-      {
-        "kv_cache_gb": 0.3564,
-        "token_capacity": 364288
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-b-test-2-gpu-large",
@@ -1753,19 +1478,11 @@
         "token_capacity": 409205
       },
       {
-        "kv_cache_gb": 32.5248,
-        "token_capacity": 390200
-      },
-      {
-        "kv_cache_gb": 17.5428,
+        "kv_cache_gb": 48.5826,
         "token_capacity": 398027
       },
       {
-        "kv_cache_gb": 32.538,
-        "token_capacity": 397904
-      },
-      {
-        "kv_cache_gb": 18.678,
+        "kv_cache_gb": 49.698,
         "token_capacity": 407099
       },
       {
@@ -1790,8 +1507,6 @@
       }
     ],
     "sample_counts": [
-      3,
-      3,
       3,
       3,
       3,
@@ -2126,14 +1841,9 @@
       {
         "kv_cache_gb": 90.5916,
         "token_capacity": 989503
-      },
-      {
-        "kv_cache_gb": 1.881,
-        "token_capacity": 989503
       }
     ],
     "sample_counts": [
-      3,
       3,
       3
     ],
@@ -2145,35 +1855,10 @@
       {
         "kv_cache_gb": 48.8367,
         "token_capacity": 1492339
-      },
-      {
-        "kv_cache_gb": 0.8019,
-        "token_capacity": 1492339
-      },
-      {
-        "kv_cache_gb": 48.8367,
-        "token_capacity": 1492339
-      },
-      {
-        "kv_cache_gb": 0.8019,
-        "token_capacity": 1492339
-      },
-      {
-        "kv_cache_gb": 48.8367,
-        "token_capacity": 1492349
-      },
-      {
-        "kv_cache_gb": 0.8019,
-        "token_capacity": 1492349
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      2,
-      2
+      3
     ],
     "suite": "base-b-test-4-gpu-b200",
     "test_file": "test/registered/spec/eagle/test_deepseek_v3_fp4_mtp_small.py"
@@ -2196,35 +1881,10 @@
       {
         "kv_cache_gb": 20.7801,
         "token_capacity": 403941
-      },
-      {
-        "kv_cache_gb": 0.2673,
-        "token_capacity": 403941
-      },
-      {
-        "kv_cache_gb": 20.7801,
-        "token_capacity": 403941
-      },
-      {
-        "kv_cache_gb": 0.2673,
-        "token_capacity": 403941
-      },
-      {
-        "kv_cache_gb": 20.7801,
-        "token_capacity": 403920
-      },
-      {
-        "kv_cache_gb": 0.2673,
-        "token_capacity": 403920
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      1,
-      1
+      3
     ],
     "suite": "base-c-test-4-gpu-b200",
     "test_file": "test/registered/models_e2e/test_dsa_glm52_nvfp4_dp_mtp.py"
@@ -2234,35 +1894,10 @@
       {
         "kv_cache_gb": 27.1755,
         "token_capacity": 528359
-      },
-      {
-        "kv_cache_gb": 0.3465,
-        "token_capacity": 528359
-      },
-      {
-        "kv_cache_gb": 27.1755,
-        "token_capacity": 528359
-      },
-      {
-        "kv_cache_gb": 0.3465,
-        "token_capacity": 528359
-      },
-      {
-        "kv_cache_gb": 27.1755,
-        "token_capacity": 528359
-      },
-      {
-        "kv_cache_gb": 0.3465,
-        "token_capacity": 528359
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      1,
-      1
+      3
     ],
     "suite": "base-c-test-4-gpu-b200",
     "test_file": "test/registered/models_e2e/test_dsa_glm52_nvfp4_tp_mtp.py"
@@ -2349,14 +1984,9 @@
       {
         "kv_cache_gb": 125.7201,
         "token_capacity": 3906017
-      },
-      {
-        "kv_cache_gb": 4.1877,
-        "token_capacity": 3906017
       }
     ],
     "sample_counts": [
-      3,
       3
     ],
     "suite": "base-c-test-4-gpu-b200",
@@ -2544,29 +2174,11 @@
   "base-c-test-4-gpu-h100::test/registered/pp/test_pp_single_node.py": {
     "launches": [
       {
-        "kv_cache_gb": 50.0742,
-        "token_capacity": 3589872
-      },
-      {
         "kv_cache_gb": 53.9253,
         "token_capacity": 3589872
       },
       {
-        "kv_cache_gb": 58.311,
-        "token_capacity": 2560409
-      },
-      {
-        "full_size": 661172,
-        "kv_cache_gb": 41.5107,
-        "swa_mem_gb": 52.965,
-        "swa_size": 528937,
-        "token_capacity": 1322781
-      },
-      {
-        "full_size": 189235,
         "kv_cache_gb": 62.4294,
-        "swa_mem_gb": 32.4819,
-        "swa_size": 151387,
         "token_capacity": 2045677
       },
       {
@@ -2588,10 +2200,7 @@
       3,
       3,
       3,
-      3,
-      3,
-      1,
-      1
+      3
     ],
     "suite": "base-c-test-4-gpu-h100",
     "test_file": "test/registered/pp/test_pp_single_node.py"
@@ -2630,44 +2239,9 @@
       {
         "kv_cache_gb": 34.6005,
         "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 0.5643,
-        "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 34.6005,
-        "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 0.5643,
-        "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 34.6005,
-        "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 0.5643,
-        "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 34.6005,
-        "token_capacity": 528672
-      },
-      {
-        "kv_cache_gb": 0.5643,
-        "token_capacity": 528672
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
       3
     ],
     "suite": "base-c-test-8-gpu-h200",
@@ -2678,65 +2252,10 @@
       {
         "kv_cache_gb": 15.1668,
         "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 15.1668,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 15.1668,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 15.1668,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 15.1668,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 15.1668,
-        "token_capacity": 162581
-      },
-      {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 162581
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      2,
-      2,
-      2,
-      2
+      3
     ],
     "suite": "base-c-test-8-gpu-h200",
     "test_file": "test/registered/models_e2e/test_dsa_glm52_dp_mtp.py"
@@ -2746,65 +2265,10 @@
       {
         "kv_cache_gb": 18.6021,
         "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 18.6021,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 18.6021,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 18.6021,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 18.6021,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 18.6021,
-        "token_capacity": 199330
-      },
-      {
-        "kv_cache_gb": 0.2376,
-        "token_capacity": 199330
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      2,
-      2,
-      1,
-      1
+      3
     ],
     "suite": "base-c-test-8-gpu-h200",
     "test_file": "test/registered/models_e2e/test_dsa_glm52_tp_mtp.py"
@@ -3079,18 +2543,6 @@
         "token_capacity": 1671703
       },
       {
-        "kv_cache_gb": 1.7919,
-        "token_capacity": 1671703
-      },
-      {
-        "kv_cache_gb": 53.8065,
-        "token_capacity": 1671703
-      },
-      {
-        "kv_cache_gb": 1.7919,
-        "token_capacity": 1671703
-      },
-      {
         "kv_cache_gb": 29.9079,
         "token_capacity": 929221
       },
@@ -3112,9 +2564,6 @@
       }
     ],
     "sample_counts": [
-      3,
-      3,
-      3,
       3,
       3,
       3,
@@ -3215,25 +2664,7 @@
     "suite": "base-c-test-deepep-8-gpu-h200",
     "test_file": "test/registered/models_e2e/test_deepseek_v4_flash_fp4_h200.py"
   },
-  "call-pr-test-extra::test/registered/8-gpu-models/test_deepseek_v32_indexcache.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 42.6888,
-        "token_capacity": 585192
-      },
-      {
-        "kv_cache_gb": 40.5009,
-        "token_capacity": 555223
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/8-gpu-models/test_deepseek_v32_indexcache.py"
-  },
-  "call-pr-test-extra::test/registered/attention/test_hybrid_attn_backend.py": {
+  "extra-a-test-1-gpu-large::test/registered/attention/test_hybrid_attn_backend.py": {
     "launches": [
       {
         "kv_cache_gb": 50.094,
@@ -3248,18 +2679,6 @@
         "token_capacity": 102470
       },
       {
-        "kv_cache_gb": 1.5642,
-        "token_capacity": 102470
-      },
-      {
-        "kv_cache_gb": 50.0346,
-        "token_capacity": 102470
-      },
-      {
-        "kv_cache_gb": 1.5642,
-        "token_capacity": 102470
-      },
-      {
         "kv_cache_gb": 50.094,
         "token_capacity": 410337
       }
@@ -3268,44 +2687,12 @@
       3,
       3,
       3,
-      3,
-      3,
-      3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-1-gpu-large",
     "test_file": "test/registered/attention/test_hybrid_attn_backend.py"
   },
-  "call-pr-test-extra::test/registered/attention/test_qwen35_deterministic.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 23.6214,
-        "mamba_cache_size": 1417,
-        "mamba_conv_gb": 0.4851,
-        "mamba_ssm_gb": 20.7801,
-        "token_capacity": 2476576
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/attention/test_qwen35_deterministic.py"
-  },
-  "call-pr-test-extra::test/registered/attention/test_torch_native_attention_backend.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 11.7018,
-        "token_capacity": 95792
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/attention/test_torch_native_attention_backend.py"
-  },
-  "call-pr-test-extra::test/registered/attention/test_triton_sliding_window.py": {
+  "extra-a-test-1-gpu-large::test/registered/attention/test_triton_sliding_window.py": {
     "launches": [
       {
         "kv_cache_gb": 56.232,
@@ -3315,10 +2702,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-1-gpu-large",
     "test_file": "test/registered/attention/test_triton_sliding_window.py"
   },
-  "call-pr-test-extra::test/registered/backends/test_torch_compile.py": {
+  "extra-a-test-1-gpu-large::test/registered/backends/test_torch_compile.py": {
     "launches": [
       {
         "kv_cache_gb": 50.0544,
@@ -3328,36 +2715,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-1-gpu-large",
     "test_file": "test/registered/backends/test_torch_compile.py"
   },
-  "call-pr-test-extra::test/registered/chunked_prefill/test_scripted_core_1gpu.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 25.7202,
-        "token_capacity": 240856
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/chunked_prefill/test_scripted_core_1gpu.py"
-  },
-  "call-pr-test-extra::test/registered/chunked_prefill/test_scripted_core_4gpu.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 66.4686,
-        "token_capacity": 2489020
-      }
-    ],
-    "sample_counts": [
-      4
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/chunked_prefill/test_scripted_core_4gpu.py"
-  },
-  "call-pr-test-extra::test/registered/chunked_prefill/test_scripted_swa_1gpu.py": {
+  "extra-a-test-1-gpu-large::test/registered/chunked_prefill/test_scripted_swa_1gpu.py": {
     "launches": [
       {
         "full_size": 4055,
@@ -3370,529 +2731,374 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-1-gpu-large",
     "test_file": "test/registered/chunked_prefill/test_scripted_swa_1gpu.py"
   },
-  "call-pr-test-extra::test/registered/cp/test_deepseek_v32_cp_single_node.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 16.8894,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 16.8894,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 16.8894,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 16.8894,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 231517
-      },
-      {
-        "kv_cache_gb": 20.7504,
-        "token_capacity": 284444
-      },
-      {
-        "kv_cache_gb": 0.3432,
-        "token_capacity": 284444
-      },
-      {
-        "kv_cache_gb": 22.6809,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 0.3762,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 22.6809,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 0.3762,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 22.6809,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 0.3762,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 22.6809,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 0.3762,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 22.6809,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 0.3762,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 22.6809,
-        "token_capacity": 310907
-      },
-      {
-        "kv_cache_gb": 0.3762,
-        "token_capacity": 310907
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      2,
-      2,
-      2,
-      2,
-      1,
-      1,
-      1,
-      1
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/cp/test_deepseek_v32_cp_single_node.py"
-  },
-  "call-pr-test-extra::test/registered/cp/test_deepseek_v3_cp_single_node.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 8.118,
-        "token_capacity": 124026
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/cp/test_deepseek_v3_cp_single_node.py"
-  },
-  "call-pr-test-extra::test/registered/cp/test_deepseek_v4_flash_fp4_b200_cp.py": {
-    "launches": [
-      {
-        "dsv4_c128": 82720,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 2647054,
-        "dsv4_c4_state": 132327,
-        "dsv4_full": 10588216,
-        "dsv4_swa": 1058618,
-        "token_capacity": 10588216
-      },
-      {
-        "dsv4_c128": 91689,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 2934074,
-        "dsv4_c4_state": 146678,
-        "dsv4_full": 11736299,
-        "dsv4_swa": 1173427,
-        "token_capacity": 11736299
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/cp/test_deepseek_v4_flash_fp4_b200_cp.py"
-  },
-  "call-pr-test-extra::test/registered/cp/test_glm52_cp_index_share.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 17.2755,
-        "token_capacity": 335871
-      },
-      {
-        "kv_cache_gb": 0.2178,
-        "token_capacity": 335871
-      },
-      {
-        "kv_cache_gb": 17.2755,
-        "token_capacity": 335871
-      },
-      {
-        "kv_cache_gb": 0.2178,
-        "token_capacity": 335871
-      },
-      {
-        "kv_cache_gb": 17.2755,
-        "token_capacity": 335871
-      },
-      {
-        "kv_cache_gb": 0.2178,
-        "token_capacity": 335871
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      2,
-      2
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/cp/test_glm52_cp_index_share.py"
-  },
-  "call-pr-test-extra::test/registered/cp/test_gqa_prefill_cp.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 48.8862,
-        "token_capacity": 1068107
-      },
-      {
-        "kv_cache_gb": 54.1332,
-        "token_capacity": 591197
-      },
-      {
-        "kv_cache_gb": 56.0538,
-        "token_capacity": 1224371
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/cp/test_gqa_prefill_cp.py"
-  },
-  "call-pr-test-extra::test/registered/cp/test_gqa_prefill_cp_legacy.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 48.8862,
-        "token_capacity": 1068107
-      },
-      {
-        "kv_cache_gb": 56.0538,
-        "token_capacity": 1224371
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/cp/test_gqa_prefill_cp_legacy.py"
-  },
-  "call-pr-test-extra::test/registered/dcp/test_dsv31_dcp8_gsm8k.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 40.5042,
-        "token_capacity": 618922
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/dcp/test_dsv31_dcp8_gsm8k.py"
-  },
-  "call-pr-test-extra::test/registered/disaggregation/test_disaggregation_hisparse.py": {
-    "launches": [
-      {
-        "dsv4_c128": 73739,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 1179826,
-        "dsv4_c4_state": 58988,
-        "dsv4_full": 9438612,
-        "dsv4_swa": 943810,
-        "token_capacity": 9438612
-      },
-      {
-        "dsv4_c128": 59405,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 1900968,
-        "dsv4_c4_state": 47520,
-        "dsv4_full": 7603875,
-        "dsv4_swa": 760320,
-        "token_capacity": 7603875
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/disaggregation/test_disaggregation_hisparse.py"
-  },
-  "call-pr-test-extra::test/registered/disaggregation/test_disaggregation_hybrid_attention.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 26.7696,
-        "mamba_cache_size": 553,
-        "mamba_conv_gb": 0.5511,
-        "mamba_ssm_gb": 23.4828,
-        "token_capacity": 1748213
-      },
-      {
-        "kv_cache_gb": 26.8752,
-        "mamba_cache_size": 446,
-        "mamba_conv_gb": 0.5577,
-        "mamba_ssm_gb": 23.6808,
-        "token_capacity": 1559884
-      },
-      {
-        "kv_cache_gb": 46.0614,
-        "mamba_cache_size": 2304,
-        "mamba_conv_gb": 0.9504,
-        "mamba_ssm_gb": 40.5141,
-        "token_capacity": 4025073
-      },
-      {
-        "kv_cache_gb": 46.3584,
-        "mamba_cache_size": 2318,
-        "mamba_conv_gb": 0.9537,
-        "mamba_ssm_gb": 40.7715,
-        "token_capacity": 4050688
-      },
-      {
-        "kv_cache_gb": 64.02,
-        "mamba_cache_size": 1722,
-        "mamba_conv_gb": 0.7953,
-        "mamba_ssm_gb": 56.7963,
-        "token_capacity": 16782117
-      },
-      {
-        "kv_cache_gb": 63.4062,
-        "mamba_cache_size": 1706,
-        "mamba_conv_gb": 0.7887,
-        "mamba_ssm_gb": 56.2749,
-        "token_capacity": 16622424
-      },
-      {
-        "kv_cache_gb": 64.02,
-        "mamba_cache_size": 1722,
-        "mamba_conv_gb": 0.7953,
-        "mamba_ssm_gb": 56.7963,
-        "token_capacity": 16782117
-      },
-      {
-        "kv_cache_gb": 63.1092,
-        "mamba_cache_size": 1697,
-        "mamba_conv_gb": 0.7854,
-        "mamba_ssm_gb": 55.9911,
-        "token_capacity": 16544493
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/disaggregation/test_disaggregation_hybrid_attention.py"
-  },
-  "call-pr-test-extra::test/registered/ep/test_deepep_large.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 9.6591,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 0.1551,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 9.6591,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 0.1551,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 9.6591,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 0.1551,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 9.6591,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 0.1551,
-        "token_capacity": 147580
-      },
-      {
-        "kv_cache_gb": 13.5696,
-        "token_capacity": 196035
-      },
-      {
-        "kv_cache_gb": 0.1535,
-        "token_capacity": 146329
-      },
-      {
-        "kv_cache_gb": 15.444,
-        "token_capacity": 219013
-      },
-      {
-        "kv_cache_gb": 0.1485,
-        "token_capacity": 142579
-      },
-      {
-        "kv_cache_gb": 9.3357,
-        "token_capacity": 142579
-      },
-      {
-        "kv_cache_gb": 0.1485,
-        "token_capacity": 142579
-      },
-      {
-        "kv_cache_gb": 21.5622,
-        "token_capacity": 295574
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      2,
-      2,
-      1,
-      1,
-      1,
-      1
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/ep/test_deepep_large.py"
-  },
-  "call-pr-test-extra::test/registered/ep/test_tbo_shared_experts_fusion.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 12.375,
-        "token_capacity": 189150
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/ep/test_tbo_shared_experts_fusion.py"
-  },
-  "call-pr-test-extra::test/registered/hicache/test_hicache_spec_file_storage.py": {
+  "extra-a-test-1-gpu-large::test/registered/hicache/test_hicache_spec_file_storage.py": {
     "launches": [
       {
         "kv_cache_gb": 6.2238,
         "token_capacity": 50899
       },
       {
-        "kv_cache_gb": 0.1914,
-        "token_capacity": 50899
-      },
-      {
-        "kv_cache_gb": 6.1182,
-        "token_capacity": 50033
-      },
-      {
-        "kv_cache_gb": 0.1914,
-        "token_capacity": 50033
+        "kv_cache_gb": 6.039,
+        "token_capacity": 49420
       }
     ],
     "sample_counts": [
       3,
-      3,
-      3,
-      3
+      1
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-1-gpu-large",
     "test_file": "test/registered/hicache/test_hicache_spec_file_storage.py"
   },
-  "call-pr-test-extra::test/registered/hicache/test_hicache_spec_mooncake_storage.py": {
+  "extra-a-test-1-gpu-large::test/registered/kv_canary/test_self_e2e_bench_speed.py": {
     "launches": [
       {
-        "kv_cache_gb": 6.2502,
-        "token_capacity": 51152
+        "kv_cache_gb": 8.514,
+        "token_capacity": 92926
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/kv_canary/test_self_e2e_bench_speed.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/models/test_compressed_tensors_models.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 56.0142,
+        "token_capacity": 458833
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/models/test_compressed_tensors_models.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/models/test_vlm_models.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 53.0574,
+        "token_capacity": 792835
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/models/test_vlm_models.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/page_major/test_page_major_gpt_oss.py": {
+    "launches": [
+      {
+        "full_size": 959038,
+        "kv_cache_gb": 21.9582,
+        "swa_mem_gb": 39.5109,
+        "swa_size": 767230,
+        "token_capacity": 959038
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/page_major/test_page_major_gpt_oss.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/page_major/test_page_major_qwen_hybrid.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 30.2742,
+        "mamba_cache_size": 566,
+        "mamba_conv_gb": 0.6237,
+        "mamba_ssm_gb": 26.5914,
+        "token_capacity": 992320
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/page_major/test_page_major_qwen_hybrid.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/perf/test_bench_serving_1gpu_large.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 56.0142,
+        "token_capacity": 458833
       },
       {
-        "kv_cache_gb": 0.198,
-        "token_capacity": 51152
+        "kv_cache_gb": 39.7386,
+        "token_capacity": 81399
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/perf/test_bench_serving_1gpu_large.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/perf/test_bench_serving_1gpu_part1.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 49.599,
+        "token_capacity": 406260
       },
       {
-        "kv_cache_gb": 6.1182,
-        "token_capacity": 50033
+        "kv_cache_gb": 49.599,
+        "token_capacity": 406276
       },
       {
-        "kv_cache_gb": 0.1914,
-        "token_capacity": 50033
+        "kv_cache_gb": 38.313,
+        "token_capacity": 313863
+      },
+      {
+        "kv_cache_gb": 49.599,
+        "token_capacity": 406260
+      },
+      {
+        "kv_cache_gb": 46.0152,
+        "token_capacity": 376911
       }
     ],
     "sample_counts": [
       3,
       3,
       3,
+      3,
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/hicache/test_hicache_spec_mooncake_storage.py"
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/perf/test_bench_serving_1gpu_part1.py"
   },
-  "call-pr-test-extra::test/registered/hicache/test_qwen35_hicache.py": {
+  "extra-a-test-1-gpu-large::test/registered/perf/test_bench_serving_1gpu_part2.py": {
     "launches": [
       {
-        "kv_cache_gb": 1.8216,
-        "mamba_cache_size": 495,
-        "mamba_conv_gb": 0.3366,
-        "mamba_ssm_gb": 8.7219,
-        "token_capacity": 118800
+        "kv_cache_gb": 60.984,
+        "token_capacity": 2283986
+      },
+      {
+        "kv_cache_gb": 61.7496,
+        "token_capacity": 1720170
+      },
+      {
+        "kv_cache_gb": 57.1494,
+        "token_capacity": 1416892
+      },
+      {
+        "kv_cache_gb": 54.0837,
+        "token_capacity": 1829071
+      },
+      {
+        "kv_cache_gb": 63.2808,
+        "token_capacity": 592538
+      },
+      {
+        "kv_cache_gb": 47.1834,
+        "token_capacity": 1374155
+      }
+    ],
+    "sample_counts": [
+      3,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/perf/test_bench_serving_1gpu_part2.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/quant/test_autoround_quantization.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 48.5496,
+        "token_capacity": 397762
       }
     ],
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/hicache/test_qwen35_hicache.py"
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/quant/test_autoround_quantization.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_baseline.py": {
+  "extra-a-test-1-gpu-large::test/registered/quant/test_fp8kv_triton.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 56.0736,
+        "token_capacity": 918618
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/quant/test_fp8kv_triton.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/quant/test_gptqmodel_dynamic.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 62.8452,
+        "token_capacity": 343197
+      },
+      {
+        "kv_cache_gb": 59.499,
+        "token_capacity": 324940
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/quant/test_gptqmodel_dynamic.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/quant/test_w8a8_quantization.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 56.0142,
+        "token_capacity": 458817
+      },
+      {
+        "kv_cache_gb": 35.5014,
+        "token_capacity": 387758
+      },
+      {
+        "kv_cache_gb": 56.0736,
+        "token_capacity": 459308
+      }
+    ],
+    "sample_counts": [
+      3,
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/quant/test_w8a8_quantization.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/sessions/test_session_control.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 62.9838,
+        "token_capacity": 2063971
+      },
+      {
+        "kv_cache_gb": 57.4398,
+        "token_capacity": 627293
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/sessions/test_session_control.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/sessions/test_session_latency.py": {
+    "launches": [
+      {
+        "full_size": 959036,
+        "kv_cache_gb": 21.9582,
+        "swa_mem_gb": 39.5109,
+        "swa_size": 767226,
+        "token_capacity": 959036
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/sessions/test_session_latency.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/sessions/test_streaming_session_extra.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 36.2802,
+        "token_capacity": 297231
+      },
+      {
+        "kv_cache_gb": 36.4254,
+        "token_capacity": 298129
+      },
+      {
+        "kv_cache_gb": 36.4056,
+        "token_capacity": 298215
+      },
+      {
+        "kv_cache_gb": 65.5578,
+        "token_capacity": 2147904
+      },
+      {
+        "kv_cache_gb": 65.5578,
+        "token_capacity": 2148085
+      }
+    ],
+    "sample_counts": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/sessions/test_streaming_session_extra.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/spec/test_spec_ngram_extra.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 48.015,
+        "token_capacity": 898877
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/spec/test_spec_ngram_extra.py"
+  },
+  "extra-a-test-1-gpu-large::test/registered/spec/test_spec_standalone_extra.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 24.7896,
+        "token_capacity": 203048
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-large",
+    "test_file": "test/registered/spec/test_spec_standalone_extra.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/attention/test_torch_native_attention_backend.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 11.7018,
+        "token_capacity": 95792
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/attention/test_torch_native_attention_backend.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/chunked_prefill/test_scripted_core_1gpu.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 25.7202,
+        "token_capacity": 240856
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/chunked_prefill/test_scripted_core_1gpu.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_baseline.py": {
     "launches": [
       {
         "kv_cache_gb": 6.93,
@@ -3910,23 +3116,229 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-1-gpu-small",
     "test_file": "test/registered/kv_canary/test_self_e2e_baseline.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_bench_speed.py": {
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_perturb_raise.py": {
     "launches": [
       {
-        "kv_cache_gb": 8.514,
-        "token_capacity": 92926
+        "kv_cache_gb": 6.93,
+        "token_capacity": 64880
       }
     ],
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_bench_speed.py"
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_raise.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_pd_baseline.py": {
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_perturb_real_kv_unused_cache.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.93,
+        "token_capacity": 64880
+      },
+      {
+        "full_size": 81100,
+        "kv_cache_gb": 1.089,
+        "swa_mem_gb": 1.5147,
+        "swa_size": 16220,
+        "token_capacity": 81100
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_real_kv_unused_cache.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_perturb_real_kv_used.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.93,
+        "token_capacity": 64880
+      },
+      {
+        "full_size": 81100,
+        "kv_cache_gb": 1.089,
+        "swa_mem_gb": 1.5147,
+        "swa_size": 16220,
+        "token_capacity": 81100
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_real_kv_used.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_perturb_req_to_token.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.93,
+        "token_capacity": 64880
+      },
+      {
+        "full_size": 81100,
+        "kv_cache_gb": 1.089,
+        "swa_mem_gb": 1.5147,
+        "swa_size": 16220,
+        "token_capacity": 81100
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_req_to_token.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_pr_25015.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.93,
+        "token_capacity": 64880
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/kv_canary/test_self_e2e_pr_25015.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/kv_canary/test_self_e2e_pr_26329.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.93,
+        "token_capacity": 64880
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/kv_canary/test_self_e2e_pr_26329.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/mock_model/test_e2e_spec_eagle.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 5.6628,
+        "token_capacity": 52973
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/mock_model/test_e2e_spec_eagle.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/mock_model/test_self_e2e_perturb_next_token_swap.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 25.7202,
+        "token_capacity": 240856
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/mock_model/test_self_e2e_perturb_next_token_swap.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/models_e2e/test_gpt_oss_sm120.py": {
+    "launches": [
+      {
+        "full_size": 283288,
+        "kv_cache_gb": 6.4746,
+        "swa_mem_gb": 11.6721,
+        "swa_size": 226630,
+        "token_capacity": 283288
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/models_e2e/test_gpt_oss_sm120.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/observability/test_tracing.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 24.2352,
+        "token_capacity": 794062
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/observability/test_tracing.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/quant/test_fp8_gemm_sm120.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 22.6314,
+        "token_capacity": 164860
+      },
+      {
+        "kv_cache_gb": 18.4536,
+        "token_capacity": 302192
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/quant/test_fp8_gemm_sm120.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/rl/test_update_weights_from_tensor.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 24.2352,
+        "token_capacity": 794062
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/rl/test_update_weights_from_tensor.py"
+  },
+  "extra-a-test-1-gpu-small::test/registered/scheduler/test_priority_scheduling.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 24.2352,
+        "token_capacity": 794062
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-1-gpu-small",
+    "test_file": "test/registered/scheduler/test_priority_scheduling.py"
+  },
+  "extra-a-test-2-gpu-large::test/registered/hicache/test_hicache_spec_mooncake_storage.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.2502,
+        "token_capacity": 51152
+      },
+      {
+        "kv_cache_gb": 6.1182,
+        "token_capacity": 50033
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-a-test-2-gpu-large",
+    "test_file": "test/registered/hicache/test_hicache_spec_mooncake_storage.py"
+  },
+  "extra-a-test-2-gpu-large::test/registered/kv_canary/test_self_e2e_pd_baseline.py": {
     "launches": [
       {
         "kv_cache_gb": 65.0034,
@@ -3956,10 +3368,10 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/kv_canary/test_self_e2e_pd_baseline.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_pd_perturb.py": {
+  "extra-a-test-2-gpu-large::test/registered/kv_canary/test_self_e2e_pd_perturb.py": {
     "launches": [
       {
         "kv_cache_gb": 65.0034,
@@ -3997,86 +3409,10 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/kv_canary/test_self_e2e_pd_perturb.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_perturb_raise.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.93,
-        "token_capacity": 64880
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_raise.py"
-  },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_perturb_real_kv_unused_cache.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.93,
-        "token_capacity": 64880
-      },
-      {
-        "full_size": 81100,
-        "kv_cache_gb": 1.089,
-        "swa_mem_gb": 1.5147,
-        "swa_size": 16220,
-        "token_capacity": 81100
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_real_kv_unused_cache.py"
-  },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_perturb_real_kv_used.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.93,
-        "token_capacity": 64880
-      },
-      {
-        "full_size": 81100,
-        "kv_cache_gb": 1.089,
-        "swa_mem_gb": 1.5147,
-        "swa_size": 16220,
-        "token_capacity": 81100
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_real_kv_used.py"
-  },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_perturb_req_to_token.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.93,
-        "token_capacity": 64880
-      },
-      {
-        "full_size": 81100,
-        "kv_cache_gb": 1.089,
-        "swa_mem_gb": 1.5147,
-        "swa_size": 16220,
-        "token_capacity": 81100
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_perturb_req_to_token.py"
-  },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_pp_baseline.py": {
+  "extra-a-test-2-gpu-large::test/registered/kv_canary/test_self_e2e_pp_baseline.py": {
     "launches": [
       {
         "full_size": 81100,
@@ -4089,10 +3425,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/kv_canary/test_self_e2e_pp_baseline.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_pp_perturb.py": {
+  "extra-a-test-2-gpu-large::test/registered/kv_canary/test_self_e2e_pp_perturb.py": {
     "launches": [
       {
         "full_size": 81100,
@@ -4105,36 +3441,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/kv_canary/test_self_e2e_pp_perturb.py"
   },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_pr_25015.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.93,
-        "token_capacity": 64880
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_pr_25015.py"
-  },
-  "call-pr-test-extra::test/registered/kv_canary/test_self_e2e_pr_26329.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.93,
-        "token_capacity": 64880
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/kv_canary/test_self_e2e_pr_26329.py"
-  },
-  "call-pr-test-extra::test/registered/mock_model/test_e2e_pd.py": {
+  "extra-a-test-2-gpu-large::test/registered/mock_model/test_e2e_pd.py": {
     "launches": [
       {
         "kv_cache_gb": 64.152,
@@ -4159,10 +3469,10 @@
       3,
       2
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/mock_model/test_e2e_pd.py"
   },
-  "call-pr-test-extra::test/registered/mock_model/test_e2e_pp.py": {
+  "extra-a-test-2-gpu-large::test/registered/mock_model/test_e2e_pp.py": {
     "launches": [
       {
         "kv_cache_gb": 63.36,
@@ -4172,23 +3482,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/mock_model/test_e2e_pp.py"
   },
-  "call-pr-test-extra::test/registered/mock_model/test_e2e_spec_eagle.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 5.6628,
-        "token_capacity": 52973
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/mock_model/test_e2e_spec_eagle.py"
-  },
-  "call-pr-test-extra::test/registered/mock_model/test_e2e_tp.py": {
+  "extra-a-test-2-gpu-large::test/registered/mock_model/test_e2e_tp.py": {
     "launches": [
       {
         "kv_cache_gb": 67.023,
@@ -4198,23 +3495,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/mock_model/test_e2e_tp.py"
   },
-  "call-pr-test-extra::test/registered/mock_model/test_self_e2e_perturb_next_token_swap.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 25.7202,
-        "token_capacity": 240856
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/mock_model/test_self_e2e_perturb_next_token_swap.py"
-  },
-  "call-pr-test-extra::test/registered/model_loading/test_load_weights_from_remote_instance.py": {
+  "extra-a-test-2-gpu-large::test/registered/model_loading/test_load_weights_from_remote_instance.py": {
     "launches": [
       {
         "kv_cache_gb": 61.7166,
@@ -4229,111 +3513,10 @@
       3,
       2
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/model_loading/test_load_weights_from_remote_instance.py"
   },
-  "call-pr-test-extra::test/registered/models/test_compressed_tensors_models.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 56.0142,
-        "token_capacity": 458833
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models/test_compressed_tensors_models.py"
-  },
-  "call-pr-test-extra::test/registered/models/test_vlm_models.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 53.0574,
-        "token_capacity": 792835
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models/test_vlm_models.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_deepseek_v4_flash_fp4_megamoe_b200.py": {
-    "launches": [
-      {
-        "dsv4_c128": 83713,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 2678839,
-        "dsv4_c4_state": 133921,
-        "dsv4_full": 10715358,
-        "dsv4_swa": 1071375,
-        "token_capacity": 10715358
-      },
-      {
-        "dsv4_c128": 83704,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 2678544,
-        "dsv4_c4_state": 133911,
-        "dsv4_full": 10714176,
-        "dsv4_swa": 1071290,
-        "token_capacity": 10714176
-      }
-    ],
-    "sample_counts": [
-      3,
-      1
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_deepseek_v4_flash_fp4_megamoe_b200.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_deepseek_v4_flash_fp8_h200.py": {
-    "launches": [
-      {
-        "dsv4_c128": 39029,
-        "dsv4_c128_state": 0,
-        "dsv4_c4": 1248952,
-        "dsv4_c4_state": 62441,
-        "dsv4_full": 4995809,
-        "dsv4_swa": 499530,
-        "token_capacity": 4995809
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_deepseek_v4_flash_fp8_h200.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_dsa_glm52_hisparse.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 20.7108,
-        "token_capacity": 157259
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_dsa_glm52_hisparse.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_gpt_oss_sm120.py": {
-    "launches": [
-      {
-        "full_size": 283288,
-        "kv_cache_gb": 6.4746,
-        "swa_mem_gb": 11.6721,
-        "swa_size": 226630,
-        "token_capacity": 283288
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_gpt_oss_sm120.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_ministral4_models.py": {
+  "extra-a-test-2-gpu-large::test/registered/models_e2e/test_ministral4_models.py": {
     "launches": [
       {
         "kv_cache_gb": 3.7224,
@@ -4348,82 +3531,10 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/models_e2e/test_ministral4_models.py"
   },
-  "call-pr-test-extra::test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 49.1238,
-        "mamba_cache_size": 2230,
-        "mamba_conv_gb": 0.6336,
-        "mamba_ssm_gb": 43.5798,
-        "token_capacity": 12875704
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16_mtp.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 6.6528,
-        "mamba_cache_size": 198,
-        "mamba_conv_gb": 0.0594,
-        "mamba_ssm_gb": 3.8907,
-        "token_capacity": 13953867
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16_mtp.py"
-  },
-  "call-pr-test-extra::test/registered/models_e2e/test_step3p5_flash_chain_mtp.py": {
-    "launches": [
-      {
-        "full_size": 3038542,
-        "kv_cache_gb": 38.2536,
-        "swa_mem_gb": 55.638,
-        "swa_size": 2430833,
-        "token_capacity": 3038542
-      },
-      {
-        "full_size": 3038542,
-        "kv_cache_gb": 0.0,
-        "swa_mem_gb": 1.1583,
-        "swa_size": 2430833,
-        "token_capacity": 3038542
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/models_e2e/test_step3p5_flash_chain_mtp.py"
-  },
-  "call-pr-test-extra::test/registered/moe/test_flashinfer_a2a_cutedsl_v2.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 31.1058,
-        "mamba_cache_size": 155,
-        "mamba_conv_gb": 0.4851,
-        "mamba_ssm_gb": 27.4923,
-        "token_capacity": 2174895
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/moe/test_flashinfer_a2a_cutedsl_v2.py"
-  },
-  "call-pr-test-extra::test/registered/moe/test_moe_ep_extra.py": {
+  "extra-a-test-2-gpu-large::test/registered/moe/test_moe_ep_extra.py": {
     "launches": [
       {
         "kv_cache_gb": 51.1038,
@@ -4433,55 +3544,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/moe/test_moe_ep_extra.py"
   },
-  "call-pr-test-extra::test/registered/observability/test_tracing.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 24.2352,
-        "token_capacity": 794062
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/observability/test_tracing.py"
-  },
-  "call-pr-test-extra::test/registered/page_major/test_page_major_gpt_oss.py": {
-    "launches": [
-      {
-        "full_size": 959038,
-        "kv_cache_gb": 21.9582,
-        "swa_mem_gb": 39.5109,
-        "swa_size": 767230,
-        "token_capacity": 959038
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/page_major/test_page_major_gpt_oss.py"
-  },
-  "call-pr-test-extra::test/registered/page_major/test_page_major_qwen_hybrid.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 30.2742,
-        "mamba_cache_size": 566,
-        "mamba_conv_gb": 0.6237,
-        "mamba_ssm_gb": 26.5914,
-        "token_capacity": 992320
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/page_major/test_page_major_qwen_hybrid.py"
-  },
-  "call-pr-test-extra::test/registered/perf/test_bench_one_batch_2gpu.py": {
+  "extra-a-test-2-gpu-large::test/registered/perf/test_bench_one_batch_2gpu.py": {
     "launches": [
       {
         "kv_cache_gb": 20.988,
@@ -4496,104 +3562,10 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/perf/test_bench_one_batch_2gpu.py"
   },
-  "call-pr-test-extra::test/registered/perf/test_bench_serving_1gpu_large.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 56.0142,
-        "token_capacity": 458833
-      },
-      {
-        "kv_cache_gb": 39.7386,
-        "token_capacity": 81399
-      },
-      {
-        "kv_cache_gb": 1.2474,
-        "token_capacity": 81399
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/perf/test_bench_serving_1gpu_large.py"
-  },
-  "call-pr-test-extra::test/registered/perf/test_bench_serving_1gpu_part1.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 49.599,
-        "token_capacity": 406260
-      },
-      {
-        "kv_cache_gb": 49.599,
-        "token_capacity": 406276
-      },
-      {
-        "kv_cache_gb": 38.313,
-        "token_capacity": 313863
-      },
-      {
-        "kv_cache_gb": 49.599,
-        "token_capacity": 406260
-      },
-      {
-        "kv_cache_gb": 46.0152,
-        "token_capacity": 376911
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/perf/test_bench_serving_1gpu_part1.py"
-  },
-  "call-pr-test-extra::test/registered/perf/test_bench_serving_1gpu_part2.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 60.984,
-        "token_capacity": 2283986
-      },
-      {
-        "kv_cache_gb": 61.7496,
-        "token_capacity": 1720170
-      },
-      {
-        "kv_cache_gb": 57.1494,
-        "token_capacity": 1416892
-      },
-      {
-        "kv_cache_gb": 54.0837,
-        "token_capacity": 1829071
-      },
-      {
-        "kv_cache_gb": 63.2808,
-        "token_capacity": 592538
-      },
-      {
-        "kv_cache_gb": 47.1834,
-        "token_capacity": 1374155
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      2,
-      1,
-      1
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/perf/test_bench_serving_1gpu_part2.py"
-  },
-  "call-pr-test-extra::test/registered/perf/test_bench_serving_2gpu.py": {
+  "extra-a-test-2-gpu-large::test/registered/perf/test_bench_serving_2gpu.py": {
     "launches": [
       {
         "kv_cache_gb": 20.5326,
@@ -4618,10 +3590,206 @@
       3,
       1
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-a-test-2-gpu-large",
     "test_file": "test/registered/perf/test_bench_serving_2gpu.py"
   },
-  "call-pr-test-extra::test/registered/pp/test_pp_parallel_compat.py": {
+  "extra-a-test-2-gpu-large::test/registered/rl/test_update_weights_from_distributed.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 62.172,
+        "token_capacity": 2037359
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-2-gpu-large",
+    "test_file": "test/registered/rl/test_update_weights_from_distributed.py"
+  },
+  "extra-a-test-2-gpu-large::test/registered/spec/test_gemma4_dflash_31b_extra.py": {
+    "launches": [
+      {
+        "full_size": 26479,
+        "kv_cache_gb": 8.0784,
+        "swa_mem_gb": 9.0882,
+        "swa_size": 21183,
+        "token_capacity": 26479
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-2-gpu-large",
+    "test_file": "test/registered/spec/test_gemma4_dflash_31b_extra.py"
+  },
+  "extra-a-test-2-gpu-large::test/registered/spec/test_gemma4_mtp_31b_extra.py": {
+    "launches": [
+      {
+        "full_size": 28658,
+        "kv_cache_gb": 8.7516,
+        "swa_mem_gb": 9.8406,
+        "swa_size": 22926,
+        "token_capacity": 63
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-a-test-2-gpu-large",
+    "test_file": "test/registered/spec/test_gemma4_mtp_31b_extra.py"
+  },
+  "extra-b-test-4-gpu-b200::test/registered/cp/test_glm52_cp_index_share.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 17.2755,
+        "token_capacity": 335871
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-b200",
+    "test_file": "test/registered/cp/test_glm52_cp_index_share.py"
+  },
+  "extra-b-test-4-gpu-b200::test/registered/moe/test_flashinfer_a2a_cutedsl_v2.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 31.1058,
+        "mamba_cache_size": 155,
+        "mamba_conv_gb": 0.4851,
+        "mamba_ssm_gb": 27.4923,
+        "token_capacity": 2174895
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-b200",
+    "test_file": "test/registered/moe/test_flashinfer_a2a_cutedsl_v2.py"
+  },
+  "extra-b-test-4-gpu-b200::test/registered/quant/test_deepseek_v3_fp4_4gpu_extra.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 55.6578,
+        "token_capacity": 850354
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-b200",
+    "test_file": "test/registered/quant/test_deepseek_v3_fp4_4gpu_extra.py"
+  },
+  "extra-b-test-4-gpu-b200::test/registered/quant/test_fp8_blockwise_gemm.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 145.6092,
+        "token_capacity": 1060266
+      },
+      {
+        "kv_cache_gb": 145.8468,
+        "token_capacity": 1061913
+      },
+      {
+        "kv_cache_gb": 145.629,
+        "token_capacity": 1060392
+      },
+      {
+        "kv_cache_gb": 145.6092,
+        "token_capacity": 1060266
+      }
+    ],
+    "sample_counts": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-b200",
+    "test_file": "test/registered/quant/test_fp8_blockwise_gemm.py"
+  },
+  "extra-b-test-4-gpu-b200::test/registered/rl/test_update_weights_from_disk_blackwell.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 120.8394,
+        "token_capacity": 2815718
+      },
+      {
+        "kv_cache_gb": 143.1342,
+        "token_capacity": 12507454
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-b200",
+    "test_file": "test/registered/rl/test_update_weights_from_disk_blackwell.py"
+  },
+  "extra-b-test-4-gpu-h100::test/registered/attention/test_qwen35_deterministic.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 23.6214,
+        "mamba_cache_size": 1417,
+        "mamba_conv_gb": 0.4851,
+        "mamba_ssm_gb": 20.7801,
+        "token_capacity": 2476576
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-h100",
+    "test_file": "test/registered/attention/test_qwen35_deterministic.py"
+  },
+  "extra-b-test-4-gpu-h100::test/registered/chunked_prefill/test_scripted_core_4gpu.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 66.4686,
+        "token_capacity": 2489020
+      }
+    ],
+    "sample_counts": [
+      4
+    ],
+    "suite": "extra-b-test-4-gpu-h100",
+    "test_file": "test/registered/chunked_prefill/test_scripted_core_4gpu.py"
+  },
+  "extra-b-test-4-gpu-h100::test/registered/cp/test_gqa_prefill_cp_legacy.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 48.8862,
+        "token_capacity": 1068107
+      },
+      {
+        "kv_cache_gb": 56.0538,
+        "token_capacity": 1224371
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-h100",
+    "test_file": "test/registered/cp/test_gqa_prefill_cp_legacy.py"
+  },
+  "extra-b-test-4-gpu-h100::test/registered/hicache/test_qwen35_hicache.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 1.8216,
+        "mamba_cache_size": 495,
+        "mamba_conv_gb": 0.3366,
+        "mamba_ssm_gb": 8.7219,
+        "token_capacity": 118800
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-h100",
+    "test_file": "test/registered/hicache/test_qwen35_hicache.py"
+  },
+  "extra-b-test-4-gpu-h100::test/registered/pp/test_pp_parallel_compat.py": {
     "launches": [
       {
         "kv_cache_gb": 56.0142,
@@ -4636,10 +3804,10 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-4-gpu-h100",
     "test_file": "test/registered/pp/test_pp_parallel_compat.py"
   },
-  "call-pr-test-extra::test/registered/pp/test_pp_single_node_extra.py": {
+  "extra-b-test-4-gpu-h100::test/registered/pp/test_pp_single_node_extra.py": {
     "launches": [
       {
         "kv_cache_gb": 11.5434,
@@ -4669,136 +3837,10 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-4-gpu-h100",
     "test_file": "test/registered/pp/test_pp_single_node_extra.py"
   },
-  "call-pr-test-extra::test/registered/quant/test_autoround_quantization.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 48.5496,
-        "token_capacity": 397762
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_autoround_quantization.py"
-  },
-  "call-pr-test-extra::test/registered/quant/test_deepseek_v3_fp4_4gpu_extra.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 55.6578,
-        "token_capacity": 850354
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_deepseek_v3_fp4_4gpu_extra.py"
-  },
-  "call-pr-test-extra::test/registered/quant/test_fp8_blockwise_gemm.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 145.6092,
-        "token_capacity": 1060266
-      },
-      {
-        "kv_cache_gb": 145.8468,
-        "token_capacity": 1061913
-      },
-      {
-        "kv_cache_gb": 145.629,
-        "token_capacity": 1060392
-      },
-      {
-        "kv_cache_gb": 145.6092,
-        "token_capacity": 1060266
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_fp8_blockwise_gemm.py"
-  },
-  "call-pr-test-extra::test/registered/quant/test_fp8_gemm_sm120.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 22.6314,
-        "token_capacity": 164860
-      },
-      {
-        "kv_cache_gb": 18.4536,
-        "token_capacity": 302192
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_fp8_gemm_sm120.py"
-  },
-  "call-pr-test-extra::test/registered/quant/test_fp8kv_triton.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 56.0736,
-        "token_capacity": 918618
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_fp8kv_triton.py"
-  },
-  "call-pr-test-extra::test/registered/quant/test_gptqmodel_dynamic.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 62.8452,
-        "token_capacity": 343197
-      },
-      {
-        "kv_cache_gb": 59.499,
-        "token_capacity": 324940
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_gptqmodel_dynamic.py"
-  },
-  "call-pr-test-extra::test/registered/quant/test_w8a8_quantization.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 56.0142,
-        "token_capacity": 458817
-      },
-      {
-        "kv_cache_gb": 35.5014,
-        "token_capacity": 387758
-      },
-      {
-        "kv_cache_gb": 56.0736,
-        "token_capacity": 459308
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/quant/test_w8a8_quantization.py"
-  },
-  "call-pr-test-extra::test/registered/radix_cache/test_int8_mamba_checkpoint_e2e.py": {
+  "extra-b-test-4-gpu-h100::test/registered/radix_cache/test_int8_mamba_checkpoint_e2e.py": {
     "launches": [
       {
         "kv_cache_gb": 8.6922,
@@ -4811,10 +3853,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-4-gpu-h100",
     "test_file": "test/registered/radix_cache/test_int8_mamba_checkpoint_e2e.py"
   },
-  "call-pr-test-extra::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_cp.py": {
+  "extra-b-test-4-gpu-h100::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_cp.py": {
     "launches": [
       {
         "kv_cache_gb": 1.683,
@@ -4824,10 +3866,10 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-4-gpu-h100",
     "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_cp.py"
   },
-  "call-pr-test-extra::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_dsv4.py": {
+  "extra-b-test-4-gpu-h100::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_dsv4.py": {
     "launches": [
       {
         "dsv4_c128": 1152,
@@ -4992,10 +4034,219 @@
       1,
       1
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-4-gpu-h100",
     "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_dsv4.py"
   },
-  "call-pr-test-extra::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_dsv4_pp.py": {
+  "extra-b-test-4-gpu-h100::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_mamba.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 37.2438,
+        "mamba_cache_size": 495,
+        "mamba_conv_gb": 0.2079,
+        "mamba_ssm_gb": 8.7219,
+        "token_capacity": 3253635
+      },
+      {
+        "kv_cache_gb": 24.2946,
+        "mamba_cache_size": 1214,
+        "mamba_conv_gb": 0.5049,
+        "mamba_ssm_gb": 21.3741,
+        "token_capacity": 2122218
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-4-gpu-h100",
+    "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_mamba.py"
+  },
+  "extra-b-test-4-gpu-h100::test/registered/spec/eagle/test_eagle_dp_attention.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 26.5518,
+        "token_capacity": 290110
+      }
+    ],
+    "sample_counts": [
+      2
+    ],
+    "suite": "extra-b-test-4-gpu-h100",
+    "test_file": "test/registered/spec/eagle/test_eagle_dp_attention.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/8-gpu-models/test_deepseek_v32_indexcache.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 42.6888,
+        "token_capacity": 585192
+      },
+      {
+        "kv_cache_gb": 40.5009,
+        "token_capacity": 555223
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/8-gpu-models/test_deepseek_v32_indexcache.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/dcp/test_dsv31_dcp8_gsm8k.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 40.5042,
+        "token_capacity": 618922
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/dcp/test_dsv31_dcp8_gsm8k.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/disaggregation/test_disaggregation_hybrid_attention.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 26.7696,
+        "mamba_cache_size": 553,
+        "mamba_conv_gb": 0.5511,
+        "mamba_ssm_gb": 23.4828,
+        "token_capacity": 1748213
+      },
+      {
+        "kv_cache_gb": 26.8752,
+        "mamba_cache_size": 446,
+        "mamba_conv_gb": 0.5577,
+        "mamba_ssm_gb": 23.6808,
+        "token_capacity": 1559884
+      },
+      {
+        "kv_cache_gb": 46.0614,
+        "mamba_cache_size": 2304,
+        "mamba_conv_gb": 0.9504,
+        "mamba_ssm_gb": 40.5141,
+        "token_capacity": 4025073
+      },
+      {
+        "kv_cache_gb": 46.3584,
+        "mamba_cache_size": 2318,
+        "mamba_conv_gb": 0.9537,
+        "mamba_ssm_gb": 40.7715,
+        "token_capacity": 4050688
+      },
+      {
+        "kv_cache_gb": 64.02,
+        "mamba_cache_size": 1722,
+        "mamba_conv_gb": 0.7953,
+        "mamba_ssm_gb": 56.7963,
+        "token_capacity": 16782117
+      },
+      {
+        "kv_cache_gb": 63.4062,
+        "mamba_cache_size": 1706,
+        "mamba_conv_gb": 0.7887,
+        "mamba_ssm_gb": 56.2749,
+        "token_capacity": 16622424
+      },
+      {
+        "kv_cache_gb": 64.02,
+        "mamba_cache_size": 1722,
+        "mamba_conv_gb": 0.7953,
+        "mamba_ssm_gb": 56.7963,
+        "token_capacity": 16782117
+      },
+      {
+        "kv_cache_gb": 63.1092,
+        "mamba_cache_size": 1697,
+        "mamba_conv_gb": 0.7854,
+        "mamba_ssm_gb": 55.9911,
+        "token_capacity": 16544493
+      }
+    ],
+    "sample_counts": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/disaggregation/test_disaggregation_hybrid_attention.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/models_e2e/test_dsa_glm52_hisparse.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 20.7108,
+        "token_capacity": 157259
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/models_e2e/test_dsa_glm52_hisparse.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 49.1238,
+        "mamba_cache_size": 2230,
+        "mamba_conv_gb": 0.6336,
+        "mamba_ssm_gb": 43.5798,
+        "token_capacity": 12875704
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16_mtp.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 6.6528,
+        "mamba_cache_size": 198,
+        "mamba_conv_gb": 0.0594,
+        "mamba_ssm_gb": 3.8907,
+        "token_capacity": 13953867
+      }
+    ],
+    "sample_counts": [
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/models_e2e/test_nvidia_nemotron_3_super_bf16_mtp.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/models_e2e/test_step3p5_flash_chain_mtp.py": {
+    "launches": [
+      {
+        "full_size": 3038542,
+        "kv_cache_gb": 38.2536,
+        "swa_mem_gb": 55.638,
+        "swa_size": 2430833,
+        "token_capacity": 3038542
+      },
+      {
+        "full_size": 3038542,
+        "kv_cache_gb": 0.0,
+        "swa_mem_gb": 1.1583,
+        "swa_size": 2430833,
+        "token_capacity": 3038542
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-8-gpu-h200",
+    "test_file": "test/registered/models_e2e/test_step3p5_flash_chain_mtp.py"
+  },
+  "extra-b-test-8-gpu-h200::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_dsv4_pp.py": {
     "launches": [
       {
         "dsv4_c128": 227606,
@@ -5080,34 +4331,10 @@
       2,
       1
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-8-gpu-h200",
     "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_dsv4_pp.py"
   },
-  "call-pr-test-extra::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_mamba.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 37.2438,
-        "mamba_cache_size": 495,
-        "mamba_conv_gb": 0.2079,
-        "mamba_ssm_gb": 8.7219,
-        "token_capacity": 3253635
-      },
-      {
-        "kv_cache_gb": 24.2946,
-        "mamba_cache_size": 1214,
-        "mamba_conv_gb": 0.5049,
-        "mamba_ssm_gb": 21.3741,
-        "token_capacity": 2122218
-      }
-    ],
-    "sample_counts": [
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_mamba.py"
-  },
-  "call-pr-test-extra::test/registered/rl/test_return_indexer_topk.py": {
+  "extra-b-test-8-gpu-h200::test/registered/rl/test_return_indexer_topk.py": {
     "launches": [
       {
         "kv_cache_gb": 2.3661,
@@ -5117,10 +4344,89 @@
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-8-gpu-h200",
     "test_file": "test/registered/rl/test_return_indexer_topk.py"
   },
-  "call-pr-test-extra::test/registered/rl/test_return_routed_experts.py": {
+  "extra-b-test-deepep-4-gpu-b200::test/registered/cp/test_deepseek_v4_flash_fp4_b200_cp.py": {
+    "launches": [
+      {
+        "dsv4_c128": 82720,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 2647054,
+        "dsv4_c4_state": 132327,
+        "dsv4_full": 10588216,
+        "dsv4_swa": 1058618,
+        "token_capacity": 10588216
+      },
+      {
+        "dsv4_c128": 91689,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 2934074,
+        "dsv4_c4_state": 146678,
+        "dsv4_full": 11736299,
+        "dsv4_swa": 1173427,
+        "token_capacity": 11736299
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-deepep-4-gpu-b200",
+    "test_file": "test/registered/cp/test_deepseek_v4_flash_fp4_b200_cp.py"
+  },
+  "extra-b-test-deepep-4-gpu-b200::test/registered/models_e2e/test_deepseek_v4_flash_fp4_megamoe_b200.py": {
+    "launches": [
+      {
+        "dsv4_c128": 83713,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 2678839,
+        "dsv4_c4_state": 133921,
+        "dsv4_full": 10715358,
+        "dsv4_swa": 1071375,
+        "token_capacity": 10715358
+      },
+      {
+        "dsv4_c128": 83704,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 2678544,
+        "dsv4_c4_state": 133911,
+        "dsv4_full": 10714176,
+        "dsv4_swa": 1071290,
+        "token_capacity": 10714176
+      }
+    ],
+    "sample_counts": [
+      3,
+      1
+    ],
+    "suite": "extra-b-test-deepep-4-gpu-b200",
+    "test_file": "test/registered/models_e2e/test_deepseek_v4_flash_fp4_megamoe_b200.py"
+  },
+  "extra-b-test-deepep-4-gpu-h100::test/registered/cp/test_gqa_prefill_cp.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 48.8862,
+        "token_capacity": 1068107
+      },
+      {
+        "kv_cache_gb": 54.1332,
+        "token_capacity": 591197
+      },
+      {
+        "kv_cache_gb": 56.0538,
+        "token_capacity": 1224371
+      }
+    ],
+    "sample_counts": [
+      3,
+      3,
+      3
+    ],
+    "suite": "extra-b-test-deepep-4-gpu-h100",
+    "test_file": "test/registered/cp/test_gqa_prefill_cp.py"
+  },
+  "extra-b-test-deepep-4-gpu-h100::test/registered/rl/test_return_routed_experts.py": {
     "launches": [
       {
         "kv_cache_gb": 36.2538,
@@ -5145,250 +4451,118 @@
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
+    "suite": "extra-b-test-deepep-4-gpu-h100",
     "test_file": "test/registered/rl/test_return_routed_experts.py"
   },
-  "call-pr-test-extra::test/registered/rl/test_update_weights_from_disk_blackwell.py": {
+  "extra-b-test-deepep-8-gpu-h200::test/registered/cp/test_deepseek_v32_cp_single_node.py": {
     "launches": [
       {
-        "kv_cache_gb": 120.8394,
-        "token_capacity": 2815718
+        "kv_cache_gb": 16.8894,
+        "token_capacity": 231517
       },
       {
-        "kv_cache_gb": 143.1342,
-        "token_capacity": 12507454
+        "kv_cache_gb": 22.6809,
+        "token_capacity": 310907
       }
     ],
     "sample_counts": [
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/rl/test_update_weights_from_disk_blackwell.py"
+    "suite": "extra-b-test-deepep-8-gpu-h200",
+    "test_file": "test/registered/cp/test_deepseek_v32_cp_single_node.py"
   },
-  "call-pr-test-extra::test/registered/rl/test_update_weights_from_distributed.py": {
+  "extra-b-test-deepep-8-gpu-h200::test/registered/cp/test_deepseek_v3_cp_single_node.py": {
     "launches": [
       {
-        "kv_cache_gb": 62.172,
-        "token_capacity": 2037359
+        "kv_cache_gb": 8.118,
+        "token_capacity": 124026
       }
     ],
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/rl/test_update_weights_from_distributed.py"
+    "suite": "extra-b-test-deepep-8-gpu-h200",
+    "test_file": "test/registered/cp/test_deepseek_v3_cp_single_node.py"
   },
-  "call-pr-test-extra::test/registered/rl/test_update_weights_from_tensor.py": {
+  "extra-b-test-deepep-8-gpu-h200::test/registered/disaggregation/test_disaggregation_hisparse.py": {
     "launches": [
       {
-        "kv_cache_gb": 24.2352,
-        "token_capacity": 794062
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/rl/test_update_weights_from_tensor.py"
-  },
-  "call-pr-test-extra::test/registered/scheduler/test_priority_scheduling.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 24.2352,
-        "token_capacity": 794062
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/scheduler/test_priority_scheduling.py"
-  },
-  "call-pr-test-extra::test/registered/sessions/test_session_control.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 62.9838,
-        "token_capacity": 2063971
+        "dsv4_c128": 73739,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 1179826,
+        "dsv4_c4_state": 58988,
+        "dsv4_full": 9438612,
+        "dsv4_swa": 943810,
+        "token_capacity": 9438612
       },
       {
-        "kv_cache_gb": 57.4398,
-        "token_capacity": 627293
+        "dsv4_c128": 59405,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 1900968,
+        "dsv4_c4_state": 47520,
+        "dsv4_full": 7603875,
+        "dsv4_swa": 760320,
+        "token_capacity": 7603875
       }
     ],
     "sample_counts": [
       3,
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/sessions/test_session_control.py"
+    "suite": "extra-b-test-deepep-8-gpu-h200",
+    "test_file": "test/registered/disaggregation/test_disaggregation_hisparse.py"
   },
-  "call-pr-test-extra::test/registered/sessions/test_session_latency.py": {
+  "extra-b-test-deepep-8-gpu-h200::test/registered/ep/test_deepep_large.py": {
     "launches": [
       {
-        "full_size": 959036,
-        "kv_cache_gb": 21.9582,
-        "swa_mem_gb": 39.5109,
-        "swa_size": 767226,
-        "token_capacity": 959036
+        "kv_cache_gb": 9.6591,
+        "token_capacity": 147580
+      },
+      {
+        "kv_cache_gb": 21.5556,
+        "token_capacity": 295489
+      }
+    ],
+    "sample_counts": [
+      3,
+      3
+    ],
+    "suite": "extra-b-test-deepep-8-gpu-h200",
+    "test_file": "test/registered/ep/test_deepep_large.py"
+  },
+  "extra-b-test-deepep-8-gpu-h200::test/registered/ep/test_tbo_shared_experts_fusion.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 12.375,
+        "token_capacity": 189150
       }
     ],
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/sessions/test_session_latency.py"
+    "suite": "extra-b-test-deepep-8-gpu-h200",
+    "test_file": "test/registered/ep/test_tbo_shared_experts_fusion.py"
   },
-  "call-pr-test-extra::test/registered/sessions/test_streaming_session_extra.py": {
+  "extra-b-test-deepep-8-gpu-h200::test/registered/models_e2e/test_deepseek_v4_flash_fp8_h200.py": {
     "launches": [
       {
-        "kv_cache_gb": 36.2802,
-        "token_capacity": 297231
-      },
-      {
-        "kv_cache_gb": 1.1352,
-        "token_capacity": 297231
-      },
-      {
-        "kv_cache_gb": 36.4254,
-        "token_capacity": 298129
-      },
-      {
-        "kv_cache_gb": 1.1418,
-        "token_capacity": 298129
-      },
-      {
-        "kv_cache_gb": 36.4056,
-        "token_capacity": 298215
-      },
-      {
-        "kv_cache_gb": 1.1418,
-        "token_capacity": 298215
-      },
-      {
-        "kv_cache_gb": 65.5578,
-        "token_capacity": 2147904
-      },
-      {
-        "kv_cache_gb": 65.5578,
-        "token_capacity": 2148085
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/sessions/test_streaming_session_extra.py"
-  },
-  "call-pr-test-extra::test/registered/spec/eagle/test_eagle_dp_attention.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 26.5518,
-        "token_capacity": 290110
-      },
-      {
-        "kv_cache_gb": 0.2772,
-        "token_capacity": 290110
-      }
-    ],
-    "sample_counts": [
-      2,
-      2
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/spec/eagle/test_eagle_dp_attention.py"
-  },
-  "call-pr-test-extra::test/registered/spec/test_gemma4_dflash_31b_extra.py": {
-    "launches": [
-      {
-        "full_size": 26479,
-        "kv_cache_gb": 8.0784,
-        "swa_mem_gb": 9.0882,
-        "swa_size": 21183,
-        "token_capacity": 26479
+        "dsv4_c128": 39029,
+        "dsv4_c128_state": 0,
+        "dsv4_c4": 1248952,
+        "dsv4_c4_state": 62441,
+        "dsv4_full": 4995809,
+        "dsv4_swa": 499530,
+        "token_capacity": 4995809
       }
     ],
     "sample_counts": [
       3
     ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/spec/test_gemma4_dflash_31b_extra.py"
+    "suite": "extra-b-test-deepep-8-gpu-h200",
+    "test_file": "test/registered/models_e2e/test_deepseek_v4_flash_fp8_h200.py"
   },
-  "call-pr-test-extra::test/registered/spec/test_gemma4_mtp_31b_extra.py": {
-    "launches": [
-      {
-        "full_size": 28658,
-        "kv_cache_gb": 8.7516,
-        "swa_mem_gb": 9.8406,
-        "swa_size": 22926,
-        "token_capacity": 63
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/spec/test_gemma4_mtp_31b_extra.py"
-  },
-  "call-pr-test-extra::test/registered/spec/test_spec_ngram_extra.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 48.015,
-        "token_capacity": 898877
-      }
-    ],
-    "sample_counts": [
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/spec/test_spec_ngram_extra.py"
-  },
-  "call-pr-test-extra::test/registered/spec/test_spec_standalone_extra.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 24.7896,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 6.1974,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 24.7896,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 6.1974,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 24.7896,
-        "token_capacity": 203048
-      },
-      {
-        "kv_cache_gb": 6.1974,
-        "token_capacity": 203048
-      }
-    ],
-    "sample_counts": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3
-    ],
-    "suite": "call-pr-test-extra",
-    "test_file": "test/registered/spec/test_spec_standalone_extra.py"
-  },
-  "nightly-test-general-1-gpu-h100::test/registered/attention/test_deepseek_v3_deterministic.py": {
+  "nightly-1-gpu::test/registered/attention/test_deepseek_v3_deterministic.py": {
     "launches": [
       {
         "kv_cache_gb": 39.4416,
@@ -5398,10 +4572,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/attention/test_deepseek_v3_deterministic.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/bench_fn/test_bench_serving_functionality.py": {
+  "nightly-1-gpu::test/registered/bench_fn/test_bench_serving_functionality.py": {
     "launches": [
       {
         "kv_cache_gb": 53.1828,
@@ -5411,28 +4585,23 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/bench_fn/test_bench_serving_functionality.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_dflash.py": {
+  "nightly-1-gpu::test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_dflash.py": {
     "launches": [
       {
         "kv_cache_gb": 32.3532,
         "token_capacity": 265017
-      },
-      {
-        "kv_cache_gb": 5.049,
-        "token_capacity": 265017
       }
     ],
     "sample_counts": [
-      1,
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_dflash.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/cuda_graph/piecewise/test_piecewise_cuda_graph_support_1_gpu.py": {
+  "nightly-1-gpu::test/registered/cuda_graph/piecewise/test_piecewise_cuda_graph_support_1_gpu.py": {
     "launches": [
       {
         "kv_cache_gb": 42.2532,
@@ -5442,10 +4611,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/cuda_graph/piecewise/test_piecewise_cuda_graph_support_1_gpu.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/debug_utils/test_crash_dump.py": {
+  "nightly-1-gpu::test/registered/debug_utils/test_crash_dump.py": {
     "launches": [
       {
         "kv_cache_gb": 63.2808,
@@ -5455,10 +4624,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/debug_utils/test_crash_dump.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/debug_utils/test_soft_watchdog.py": {
+  "nightly-1-gpu::test/registered/debug_utils/test_soft_watchdog.py": {
     "launches": [
       {
         "kv_cache_gb": 63.2808,
@@ -5468,10 +4637,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/debug_utils/test_soft_watchdog.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/lora/test_lora_openai_compatible.py": {
+  "nightly-1-gpu::test/registered/lora/test_lora_openai_compatible.py": {
     "launches": [
       {
         "kv_cache_gb": 62.1324,
@@ -5491,10 +4660,10 @@
       1,
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/lora/test_lora_openai_compatible.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/radix_cache/test_cpp_radix_cache.py": {
+  "nightly-1-gpu::test/registered/radix_cache/test_cpp_radix_cache.py": {
     "launches": [
       {
         "kv_cache_gb": 49.599,
@@ -5504,10 +4673,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/radix_cache/test_cpp_radix_cache.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/rl/test_weight_checker_e2e.py": {
+  "nightly-1-gpu::test/registered/rl/test_weight_checker_e2e.py": {
     "launches": [
       {
         "kv_cache_gb": 53.1828,
@@ -5517,10 +4686,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/rl/test_weight_checker_e2e.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/scheduler/test_routing_key_scheduling.py": {
+  "nightly-1-gpu::test/registered/scheduler/test_routing_key_scheduling.py": {
     "launches": [
       {
         "kv_cache_gb": 63.2808,
@@ -5530,10 +4699,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/scheduler/test_routing_key_scheduling.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/utils/test_model_file_verifier.py": {
+  "nightly-1-gpu::test/registered/utils/test_model_file_verifier.py": {
     "launches": [
       {
         "kv_cache_gb": 63.2808,
@@ -5543,10 +4712,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/utils/test_model_file_verifier.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/utils/test_request_logger.py": {
+  "nightly-1-gpu::test/registered/utils/test_request_logger.py": {
     "launches": [
       {
         "kv_cache_gb": 63.2808,
@@ -5556,10 +4725,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/utils/test_request_logger.py"
   },
-  "nightly-test-general-1-gpu-h100::test/registered/utils/test_scheduler_status_logger.py": {
+  "nightly-1-gpu::test/registered/utils/test_scheduler_status_logger.py": {
     "launches": [
       {
         "kv_cache_gb": 63.2808,
@@ -5569,756 +4738,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-general-1-gpu-h100",
+    "suite": "nightly-1-gpu",
     "test_file": "test/registered/utils/test_scheduler_status_logger.py"
   },
-  "nightly-test-general-4-gpu-h100::test/registered/attention/test_qwen3_next_deterministic.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 13.9194,
-        "mamba_cache_size": 695,
-        "mamba_conv_gb": 0.2871,
-        "mamba_ssm_gb": 12.2562,
-        "token_capacity": 1216800
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-4-gpu-h100",
-    "test_file": "test/registered/attention/test_qwen3_next_deterministic.py"
-  },
-  "nightly-test-general-4-gpu-h100::test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 16.632,
-        "token_capacity": 363380
-      },
-      {
-        "kv_cache_gb": 0.3564,
-        "token_capacity": 363380
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-4-gpu-h100",
-    "test_file": "test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding.py"
-  },
-  "nightly-test-general-4-gpu-h100::test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_extra.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 3.6036,
-        "mamba_cache_size": 354,
-        "mamba_conv_gb": 0.2475,
-        "mamba_ssm_gb": 10.4148,
-        "token_capacity": 117910
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-4-gpu-h100",
-    "test_file": "test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_extra.py"
-  },
-  "nightly-test-general-4-gpu-h100::test/registered/vlm/test_encoder_dp.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 43.461,
-        "token_capacity": 711909
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-4-gpu-h100",
-    "test_file": "test/registered/vlm/test_encoder_dp.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_glm52_fp8.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 59.4297,
-        "token_capacity": 1155496
-      },
-      {
-        "kv_cache_gb": 46.6686,
-        "token_capacity": 907315
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 42.6492,
-        "token_capacity": 829192
-      },
-      {
-        "kv_cache_gb": 0.5445,
-        "token_capacity": 829192
-      }
-    ],
-    "sample_counts": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_glm52_fp8.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_glm_46.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 40.59,
-        "token_capacity": 925056
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_glm_46.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_gpt_oss_120b.py": {
-    "launches": [
-      {
-        "full_size": 19493020,
-        "kv_cache_gb": 73.4382,
-        "swa_mem_gb": 150.579,
-        "swa_size": 15594416,
-        "token_capacity": 17114423
-      },
-      {
-        "full_size": 17114423,
-        "kv_cache_gb": 8.1576,
-        "swa_mem_gb": 132.2046,
-        "swa_size": 13691525,
-        "token_capacity": 17114423
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_gpt_oss_120b.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_kimi_k25.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 62.568,
-        "token_capacity": 955975
-      },
-      {
-        "kv_cache_gb": 36.1944,
-        "token_capacity": 552942
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_kimi_k25.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_ling_2_6_flash.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 14.7609,
-        "mamba_cache_size": 253,
-        "mamba_conv_gb": 0.0,
-        "mamba_ssm_gb": 3.4749,
-        "token_capacity": 13758031
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_ling_2_6_flash.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_minimax_m25.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 121.4532,
-        "token_capacity": 4108389
-      },
-      {
-        "kv_cache_gb": 118.2654,
-        "token_capacity": 499973
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_minimax_m25.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_mistral_large3.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 28.2051,
-        "token_capacity": 430848
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 25.9083,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 0.4257,
-        "token_capacity": 395746
-      },
-      {
-        "kv_cache_gb": 60.3603,
-        "token_capacity": 922268
-      }
-    ],
-    "sample_counts": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_mistral_large3.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_nvidia_nemotron_3_super_nightly.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 60.9048,
-        "mamba_cache_size": 2765,
-        "mamba_conv_gb": 0.792,
-        "mamba_ssm_gb": 54.0243,
-        "token_capacity": 15966031
-      },
-      {
-        "kv_cache_gb": 5.9004,
-        "mamba_cache_size": 506,
-        "mamba_conv_gb": 0.1485,
-        "mamba_ssm_gb": 9.9198,
-        "token_capacity": 12367598
-      },
-      {
-        "kv_cache_gb": 72.468,
-        "mamba_cache_size": 3290,
-        "mamba_conv_gb": 0.9405,
-        "mamba_ssm_gb": 64.2906,
-        "token_capacity": 37996596
-      },
-      {
-        "kv_cache_gb": 8.6328,
-        "mamba_cache_size": 506,
-        "mamba_conv_gb": 0.1485,
-        "mamba_ssm_gb": 9.9198,
-        "token_capacity": 36249483
-      }
-    ],
-    "sample_counts": [
-      1,
-      1,
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_nvidia_nemotron_3_super_nightly.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_qwen35.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 48.906,
-        "mamba_cache_size": 1967,
-        "mamba_conv_gb": 0.7623,
-        "mamba_ssm_gb": 43.2432,
-        "token_capacity": 3418605
-      },
-      {
-        "kv_cache_gb": 44.7678,
-        "mamba_cache_size": 224,
-        "mamba_conv_gb": 0.693,
-        "mamba_ssm_gb": 39.6792,
-        "token_capacity": 1565049
-      },
-      {
-        "kv_cache_gb": 3.7224,
-        "mamba_cache_size": 119,
-        "mamba_conv_gb": 0.3762,
-        "mamba_ssm_gb": 21.2355,
-        "token_capacity": 1952121
-      }
-    ],
-    "sample_counts": [
-      1,
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_qwen35.py"
-  },
-  "nightly-test-general-8-gpu-b200::test/registered/8-gpu-models/test_ring_2_5_1t.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 15.6519,
-        "mamba_cache_size": 411,
-        "mamba_conv_gb": 0.0,
-        "mamba_ssm_gb": 14.1075,
-        "token_capacity": 1458628
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-b200",
-    "test_file": "test/registered/8-gpu-models/test_ring_2_5_1t.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_glm52_fp8.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 27.3933,
-        "token_capacity": 293610
-      },
-      {
-        "kv_cache_gb": 14.6718,
-        "token_capacity": 157259
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 11.1177,
-        "token_capacity": 119180
-      },
-      {
-        "kv_cache_gb": 0.1386,
-        "token_capacity": 119180
-      }
-    ],
-    "sample_counts": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_glm52_fp8.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_glm_46.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 40.2534,
-        "token_capacity": 917492
-      },
-      {
-        "kv_cache_gb": 40.2534,
-        "token_capacity": 917494
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_glm_46.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_gpt_oss_120b.py": {
-    "launches": [
-      {
-        "full_size": 15221452,
-        "kv_cache_gb": 57.4002,
-        "swa_mem_gb": 117.5823,
-        "swa_size": 12177162,
-        "token_capacity": 13376204
-      },
-      {
-        "full_size": 13376204,
-        "kv_cache_gb": 6.3756,
-        "swa_mem_gb": 103.3263,
-        "swa_size": 10700963,
-        "token_capacity": 13376204
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_gpt_oss_120b.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_kimi_k25.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 38.5506,
-        "token_capacity": 589057
-      },
-      {
-        "kv_cache_gb": 12.2562,
-        "token_capacity": 187200
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_kimi_k25.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_ling_2_6_flash.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 9.0783,
-        "mamba_cache_size": 253,
-        "mamba_conv_gb": 0.0,
-        "mamba_ssm_gb": 3.4749,
-        "token_capacity": 8465171
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_ling_2_6_flash.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_minimax_m25.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 89.3178,
-        "token_capacity": 3021117
-      },
-      {
-        "kv_cache_gb": 86.1102,
-        "token_capacity": 364124
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_minimax_m25.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_nvidia_nemotron_3_super_nightly.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 49.1238,
-        "mamba_cache_size": 2230,
-        "mamba_conv_gb": 0.6336,
-        "mamba_ssm_gb": 43.5798,
-        "token_capacity": 12875724
-      },
-      {
-        "kv_cache_gb": 2.8314,
-        "mamba_cache_size": 506,
-        "mamba_conv_gb": 0.1485,
-        "mamba_ssm_gb": 9.9198,
-        "token_capacity": 5930048
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_nvidia_nemotron_3_super_nightly.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_qwen35.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 32.9868,
-        "mamba_cache_size": 1326,
-        "mamba_conv_gb": 0.5148,
-        "mamba_ssm_gb": 29.1753,
-        "token_capacity": 2305676
-      },
-      {
-        "kv_cache_gb": 28.9674,
-        "mamba_cache_size": 144,
-        "mamba_conv_gb": 0.4455,
-        "mamba_ssm_gb": 25.5816,
-        "token_capacity": 1012264
-      },
-      {
-        "kv_cache_gb": 2.277,
-        "mamba_cache_size": 75,
-        "mamba_conv_gb": 0.2376,
-        "mamba_ssm_gb": 13.4046,
-        "token_capacity": 1190941
-      }
-    ],
-    "sample_counts": [
-      1,
-      1,
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_qwen35.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/8-gpu-models/test_ring_2_5_1t.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 1.9305,
-        "mamba_cache_size": 50,
-        "mamba_conv_gb": 0.0,
-        "mamba_ssm_gb": 1.7622,
-        "token_capacity": 179689
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/8-gpu-models/test_ring_2_5_1t.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/cuda_graph/piecewise/test_pcg_glm52_fp8_tp8.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 20.5623,
-        "token_capacity": 220366
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/cuda_graph/piecewise/test_pcg_glm52_fp8_tp8.py"
-  },
-  "nightly-test-general-8-gpu-h200::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_nightly.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 20.5623,
-        "token_capacity": 220366
-      }
-    ],
-    "sample_counts": [
-      1
-    ],
-    "suite": "nightly-test-general-8-gpu-h200",
-    "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_nightly.py"
-  },
-  "nightly-test-perf-4-gpu-b200::test/registered/4-gpu-models/test_nvidia_nemotron_3_super_nvfp4.py": {
+  "nightly-4-gpu-b200::test/registered/4-gpu-models/test_nvidia_nemotron_3_super_nvfp4.py": {
     "launches": [
       {
         "kv_cache_gb": 67.716,
@@ -6339,10 +4762,10 @@
       1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/4-gpu-models/test_nvidia_nemotron_3_super_nvfp4.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/backends/test_deepseek_v3_fp4_cutedsl_moe.py": {
+  "nightly-4-gpu-b200::test/registered/backends/test_deepseek_v3_fp4_cutedsl_moe.py": {
     "launches": [
       {
         "kv_cache_gb": 36.6102,
@@ -6352,10 +4775,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/backends/test_deepseek_v3_fp4_cutedsl_moe.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/backends/test_deepseek_v3_fp4_cutlass_moe.py": {
+  "nightly-4-gpu-b200::test/registered/backends/test_deepseek_v3_fp4_cutlass_moe.py": {
     "launches": [
       {
         "kv_cache_gb": 55.6578,
@@ -6365,10 +4788,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/backends/test_deepseek_v3_fp4_cutlass_moe.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/backends/test_flashinfer_trtllm_gen_attn_backend.py": {
+  "nightly-4-gpu-b200::test/registered/backends/test_flashinfer_trtllm_gen_attn_backend.py": {
     "launches": [
       {
         "kv_cache_gb": 44.8272,
@@ -6381,10 +4804,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/backends/test_flashinfer_trtllm_gen_attn_backend.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/backends/test_flashinfer_trtllm_gen_moe_backend.py": {
+  "nightly-4-gpu-b200::test/registered/backends/test_flashinfer_trtllm_gen_moe_backend.py": {
     "launches": [
       {
         "kv_cache_gb": 44.8074,
@@ -6413,10 +4836,10 @@
       1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/backends/test_flashinfer_trtllm_gen_moe_backend.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/cuda_graph/piecewise/test_pcg_glm52_fp4.py": {
+  "nightly-4-gpu-b200::test/registered/cuda_graph/piecewise/test_pcg_glm52_fp4.py": {
     "launches": [
       {
         "kv_cache_gb": 40.8573,
@@ -6426,10 +4849,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/cuda_graph/piecewise/test_pcg_glm52_fp4.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/models_e2e/test_qwen3_next_models_fp4.py": {
+  "nightly-4-gpu-b200::test/registered/models_e2e/test_qwen3_next_models_fp4.py": {
     "launches": [
       {
         "kv_cache_gb": 80.8038,
@@ -6442,10 +4865,10 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/models_e2e/test_qwen3_next_models_fp4.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/perf/test_dpsk_v3_fp4_4gpu_perf.py": {
+  "nightly-4-gpu-b200::test/registered/perf/test_dpsk_v3_fp4_4gpu_perf.py": {
     "launches": [
       {
         "kv_cache_gb": 55.5984,
@@ -6454,51 +4877,16 @@
       {
         "kv_cache_gb": 22.1067,
         "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 0.3663,
-        "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 22.1067,
-        "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 0.3663,
-        "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 22.1067,
-        "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 0.3663,
-        "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 22.1067,
-        "token_capacity": 337708
-      },
-      {
-        "kv_cache_gb": 0.3663,
-        "token_capacity": 337708
       }
     ],
     "sample_counts": [
       1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/perf/test_dpsk_v3_fp4_4gpu_perf.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/perf/test_gpt_oss_4gpu_perf.py": {
+  "nightly-4-gpu-b200::test/registered/perf/test_gpt_oss_4gpu_perf.py": {
     "launches": [
       {
         "full_size": 9359665,
@@ -6511,68 +4899,23 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/perf/test_gpt_oss_4gpu_perf.py"
   },
-  "nightly-test-perf-4-gpu-b200::test/registered/quant/test_kimi_k25_nvfp4_eagle.py": {
+  "nightly-4-gpu-b200::test/registered/quant/test_kimi_k25_nvfp4_eagle.py": {
     "launches": [
       {
         "kv_cache_gb": 7.9992,
         "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 0.1287,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 7.9992,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 0.1287,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 7.9992,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 0.1287,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 7.9992,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 0.1287,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 7.9992,
-        "token_capacity": 244252
-      },
-      {
-        "kv_cache_gb": 0.1287,
-        "token_capacity": 244252
       }
     ],
     "sample_counts": [
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-b200",
+    "suite": "nightly-4-gpu-b200",
     "test_file": "test/registered/quant/test_kimi_k25_nvfp4_eagle.py"
   },
-  "nightly-test-perf-4-gpu-gb300::test/registered/gb300/test_deepseek_v4_pro_fp4.py": {
+  "nightly-4-gpu-gb300-deepseek-v4-pro-fp4::test/registered/gb300/test_deepseek_v4_pro_fp4.py": {
     "launches": [
       {
         "dsv4_c128": 10525,
@@ -6607,136 +4950,46 @@
       1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-gb300",
+    "suite": "nightly-4-gpu-gb300-deepseek-v4-pro-fp4",
     "test_file": "test/registered/gb300/test_deepseek_v4_pro_fp4.py"
   },
-  "nightly-test-perf-4-gpu-gb300::test/registered/gb300/test_glm52_nvfp4.py": {
+  "nightly-4-gpu-gb300-glm5-nvfp4::test/registered/gb300/test_glm52_nvfp4.py": {
     "launches": [
       {
         "kv_cache_gb": 130.7691,
         "token_capacity": 2542573
       },
       {
-        "kv_cache_gb": 1.6731,
-        "token_capacity": 2542573
-      },
-      {
-        "kv_cache_gb": 130.7691,
-        "token_capacity": 2542573
-      },
-      {
-        "kv_cache_gb": 1.6731,
-        "token_capacity": 2542573
-      },
-      {
-        "kv_cache_gb": 130.7691,
-        "token_capacity": 2542573
-      },
-      {
-        "kv_cache_gb": 1.6731,
-        "token_capacity": 2542573
-      },
-      {
         "kv_cache_gb": 110.5929,
-        "token_capacity": 2150248
-      },
-      {
-        "kv_cache_gb": 1.4157,
-        "token_capacity": 2150248
-      },
-      {
-        "kv_cache_gb": 110.5929,
-        "token_capacity": 2150248
-      },
-      {
-        "kv_cache_gb": 1.4157,
         "token_capacity": 2150248
       }
     ],
     "sample_counts": [
       1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-gb300",
+    "suite": "nightly-4-gpu-gb300-glm5-nvfp4",
     "test_file": "test/registered/gb300/test_glm52_nvfp4.py"
   },
-  "nightly-test-perf-4-gpu-gb300::test/registered/gb300/test_kimi_k25_nvfp4.py": {
+  "nightly-4-gpu-gb300-kimi-k25-nvfp4::test/registered/gb300/test_kimi_k25_nvfp4.py": {
     "launches": [
       {
         "kv_cache_gb": 75.9132,
         "token_capacity": 2319736
       },
       {
-        "kv_cache_gb": 1.2474,
-        "token_capacity": 2319736
-      },
-      {
-        "kv_cache_gb": 75.9132,
-        "token_capacity": 2319736
-      },
-      {
-        "kv_cache_gb": 1.2474,
-        "token_capacity": 2319736
-      },
-      {
         "kv_cache_gb": 61.974,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 1.0197,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 61.974,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 1.0197,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 61.974,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 1.0197,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 61.974,
-        "token_capacity": 1893893
-      },
-      {
-        "kv_cache_gb": 1.0197,
         "token_capacity": 1893893
       }
     ],
     "sample_counts": [
       1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-gb300",
+    "suite": "nightly-4-gpu-gb300-kimi-k25-nvfp4",
     "test_file": "test/registered/gb300/test_kimi_k25_nvfp4.py"
   },
-  "nightly-test-perf-4-gpu-gb300::test/registered/gb300/test_qwen35_fp8.py": {
+  "nightly-4-gpu-gb300-qwen35-fp8::test/registered/gb300/test_qwen35_fp8.py": {
     "launches": [
       {
         "kv_cache_gb": 5.445,
@@ -6757,23 +5010,68 @@
       1,
       1
     ],
-    "suite": "nightly-test-perf-4-gpu-gb300",
+    "suite": "nightly-4-gpu-gb300-qwen35-fp8",
     "test_file": "test/registered/gb300/test_qwen35_fp8.py"
   },
-  "nightly-test-precision-8-gpu-h200::test/registered/debug_utils/test_nightly_precision_regression.py": {
+  "nightly-4-gpu::test/registered/attention/test_qwen3_next_deterministic.py": {
     "launches": [
       {
-        "kv_cache_gb": 0.3861,
-        "token_capacity": 4055
+        "kv_cache_gb": 13.9194,
+        "mamba_cache_size": 695,
+        "mamba_conv_gb": 0.2871,
+        "mamba_ssm_gb": 12.2562,
+        "token_capacity": 1216800
       }
     ],
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-precision-8-gpu-h200",
-    "test_file": "test/registered/debug_utils/test_nightly_precision_regression.py"
+    "suite": "nightly-4-gpu",
+    "test_file": "test/registered/attention/test_qwen3_next_deterministic.py"
   },
-  "nightly-test-specialized-8-gpu-b200::test/registered/backends/test_deepseek_r1_fp8_trtllm_backend.py": {
+  "nightly-4-gpu::test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 16.632,
+        "token_capacity": 363380
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-4-gpu",
+    "test_file": "test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding.py"
+  },
+  "nightly-4-gpu::test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_extra.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 3.6036,
+        "mamba_cache_size": 354,
+        "mamba_conv_gb": 0.2475,
+        "mamba_ssm_gb": 10.4148,
+        "token_capacity": 117910
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-4-gpu",
+    "test_file": "test/registered/cuda_graph/piecewise/test_pcg_with_speculative_decoding_extra.py"
+  },
+  "nightly-4-gpu::test/registered/vlm/test_encoder_dp.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 43.461,
+        "token_capacity": 711909
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-4-gpu",
+    "test_file": "test/registered/vlm/test_encoder_dp.py"
+  },
+  "nightly-8-gpu-b200::test/registered/backends/test_deepseek_r1_fp8_trtllm_backend.py": {
     "launches": [
       {
         "kv_cache_gb": 78.3981,
@@ -6783,66 +5081,290 @@
     "sample_counts": [
       1
     ],
-    "suite": "nightly-test-specialized-8-gpu-b200",
+    "suite": "nightly-8-gpu-b200",
     "test_file": "test/registered/backends/test_deepseek_r1_fp8_trtllm_backend.py"
   },
-  "nightly-test-specialized-8-gpu-b200::test/registered/quant/test_kimi_k26_nvfp4_dflash.py": {
+  "nightly-8-gpu-b200::test/registered/quant/test_kimi_k26_nvfp4_dflash.py": {
     "launches": [
       {
         "kv_cache_gb": 68.6664,
         "token_capacity": 2098229
-      },
-      {
-        "kv_cache_gb": 5.9994,
-        "token_capacity": 2098229
-      },
-      {
-        "kv_cache_gb": 68.6664,
-        "token_capacity": 2098229
-      },
-      {
-        "kv_cache_gb": 5.9994,
-        "token_capacity": 2098229
       }
     ],
     "sample_counts": [
-      1,
-      1,
-      1,
       1
     ],
-    "suite": "nightly-test-specialized-8-gpu-b200",
+    "suite": "nightly-8-gpu-b200",
     "test_file": "test/registered/quant/test_kimi_k26_nvfp4_dflash.py"
   },
-  "nightly-test-specialized-8-gpu-b200::test/registered/spec/eagle/test_eagle_infer_beta_dp_attention_large.py": {
+  "nightly-8-gpu-b200::test/registered/spec/eagle/test_eagle_infer_beta_dp_attention_large.py": {
     "launches": [
       {
         "kv_cache_gb": 21.7206,
         "token_capacity": 663569
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-8-gpu-b200",
+    "test_file": "test/registered/spec/eagle/test_eagle_infer_beta_dp_attention_large.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_glm52_fp8.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 43.4115,
+        "token_capacity": 724553
       },
       {
-        "kv_cache_gb": 0.3564,
-        "token_capacity": 663569
+        "kv_cache_gb": 30.6702,
+        "token_capacity": 532287
       },
       {
-        "kv_cache_gb": 21.7206,
-        "token_capacity": 663569
+        "kv_cache_gb": 26.8834,
+        "token_capacity": 474186
+      }
+    ],
+    "sample_counts": [
+      2,
+      2,
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_glm52_fp8.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_glm_46.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 40.4217,
+        "token_capacity": 921274
       },
       {
-        "kv_cache_gb": 0.3564,
-        "token_capacity": 663569
+        "kv_cache_gb": 40.2534,
+        "token_capacity": 917494
+      }
+    ],
+    "sample_counts": [
+      2,
+      1
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_glm_46.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_gpt_oss_120b.py": {
+    "launches": [
+      {
+        "full_size": 17357236,
+        "kv_cache_gb": 65.4192,
+        "swa_mem_gb": 134.0806,
+        "swa_size": 13885789,
+        "token_capacity": 15245313
+      },
+      {
+        "full_size": 15245313,
+        "kv_cache_gb": 7.2666,
+        "swa_mem_gb": 117.7655,
+        "swa_size": 12196244,
+        "token_capacity": 15245313
+      }
+    ],
+    "sample_counts": [
+      2,
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_gpt_oss_120b.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_kimi_k25.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 50.5593,
+        "token_capacity": 772516
+      },
+      {
+        "kv_cache_gb": 24.2253,
+        "token_capacity": 370071
+      }
+    ],
+    "sample_counts": [
+      2,
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_kimi_k25.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_ling_2_6_flash.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 11.9196,
+        "mamba_cache_size": 253,
+        "mamba_conv_gb": 0.0,
+        "mamba_ssm_gb": 3.4749,
+        "token_capacity": 11111601
+      }
+    ],
+    "sample_counts": [
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_ling_2_6_flash.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_minimax_m25.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 105.3855,
+        "token_capacity": 3564753
+      },
+      {
+        "kv_cache_gb": 102.1878,
+        "token_capacity": 432049
+      }
+    ],
+    "sample_counts": [
+      2,
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_minimax_m25.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_mistral_large3.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 28.2051,
+        "token_capacity": 430848
+      },
+      {
+        "kv_cache_gb": 25.9083,
+        "token_capacity": 395746
+      },
+      {
+        "kv_cache_gb": 60.3603,
+        "token_capacity": 922268
       }
     ],
     "sample_counts": [
       1,
       1,
+      1
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_mistral_large3.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_nvidia_nemotron_3_super_nightly.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 55.0143,
+        "mamba_cache_size": 2497,
+        "mamba_conv_gb": 0.7128,
+        "mamba_ssm_gb": 48.8021,
+        "token_capacity": 14420878
+      },
+      {
+        "kv_cache_gb": 4.3659,
+        "mamba_cache_size": 506,
+        "mamba_conv_gb": 0.1485,
+        "mamba_ssm_gb": 9.9198,
+        "token_capacity": 9148823
+      },
+      {
+        "kv_cache_gb": 72.468,
+        "mamba_cache_size": 3290,
+        "mamba_conv_gb": 0.9405,
+        "mamba_ssm_gb": 64.2906,
+        "token_capacity": 37996596
+      },
+      {
+        "kv_cache_gb": 8.6328,
+        "mamba_cache_size": 506,
+        "mamba_conv_gb": 0.1485,
+        "mamba_ssm_gb": 9.9198,
+        "token_capacity": 36249483
+      }
+    ],
+    "sample_counts": [
+      2,
+      2,
       1,
       1
     ],
-    "suite": "nightly-test-specialized-8-gpu-b200",
-    "test_file": "test/registered/spec/eagle/test_eagle_infer_beta_dp_attention_large.py"
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_nvidia_nemotron_3_super_nightly.py"
   },
-  "nightly-test-text-accuracy-2-gpu-h100::test/registered/eval/test_text_models_gsm8k_eval.py": {
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_qwen35.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 40.9464,
+        "mamba_cache_size": 1646,
+        "mamba_conv_gb": 0.6386,
+        "mamba_ssm_gb": 36.2093,
+        "token_capacity": 2862140
+      },
+      {
+        "kv_cache_gb": 36.8676,
+        "mamba_cache_size": 184,
+        "mamba_conv_gb": 0.5692,
+        "mamba_ssm_gb": 32.6304,
+        "token_capacity": 1288656
+      },
+      {
+        "kv_cache_gb": 2.9997,
+        "mamba_cache_size": 97,
+        "mamba_conv_gb": 0.3069,
+        "mamba_ssm_gb": 17.32,
+        "token_capacity": 1571531
+      }
+    ],
+    "sample_counts": [
+      2,
+      2,
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_qwen35.py"
+  },
+  "nightly-8-gpu-common::test/registered/8-gpu-models/test_ring_2_5_1t.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 8.7912,
+        "mamba_cache_size": 231,
+        "mamba_conv_gb": 0.0,
+        "mamba_ssm_gb": 7.9349,
+        "token_capacity": 819159
+      }
+    ],
+    "sample_counts": [
+      2
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/8-gpu-models/test_ring_2_5_1t.py"
+  },
+  "nightly-8-gpu-common::test/registered/cuda_graph/piecewise/test_pcg_glm52_fp8_tp8.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 20.5623,
+        "token_capacity": 220366
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/cuda_graph/piecewise/test_pcg_glm52_fp8_tp8.py"
+  },
+  "nightly-8-gpu-common::test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_nightly.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 20.5623,
+        "token_capacity": 220366
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-8-gpu-common",
+    "test_file": "test/registered/radix_cache/unified_radix_tree/test_unified_radix_cache_kl_nightly.py"
+  },
+  "nightly-eval-text-2-gpu::test/registered/eval/test_text_models_gsm8k_eval.py": {
     "launches": [
       {
         "kv_cache_gb": 49.599,
@@ -6927,28 +5449,10 @@
       1,
       1
     ],
-    "suite": "nightly-test-text-accuracy-2-gpu-h100",
+    "suite": "nightly-eval-text-2-gpu",
     "test_file": "test/registered/eval/test_text_models_gsm8k_eval.py"
   },
-  "nightly-test-text-perf-2-gpu-h100::test/registered/perf/test_text_models_perf.py": {
-    "launches": [
-      {
-        "kv_cache_gb": 49.599,
-        "token_capacity": 406260
-      },
-      {
-        "kv_cache_gb": 10.593,
-        "token_capacity": 396983
-      }
-    ],
-    "sample_counts": [
-      1,
-      1
-    ],
-    "suite": "nightly-test-text-perf-2-gpu-h100",
-    "test_file": "test/registered/perf/test_text_models_perf.py"
-  },
-  "nightly-test-vlm-accuracy-2-gpu-h100::test/registered/eval/test_vlms_mmmu_eval.py": {
+  "nightly-eval-vlm-2-gpu::test/registered/eval/test_vlms_mmmu_eval.py": {
     "launches": [
       {
         "kv_cache_gb": 31.6206,
@@ -6997,10 +5501,28 @@
       1,
       1
     ],
-    "suite": "nightly-test-vlm-accuracy-2-gpu-h100",
+    "suite": "nightly-eval-vlm-2-gpu",
     "test_file": "test/registered/eval/test_vlms_mmmu_eval.py"
   },
-  "nightly-test-vlm-perf-2-gpu-h100::test/registered/perf/test_vlms_perf.py": {
+  "nightly-perf-text-2-gpu::test/registered/perf/test_text_models_perf.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 49.599,
+        "token_capacity": 406260
+      },
+      {
+        "kv_cache_gb": 10.593,
+        "token_capacity": 396983
+      }
+    ],
+    "sample_counts": [
+      1,
+      1
+    ],
+    "suite": "nightly-perf-text-2-gpu",
+    "test_file": "test/registered/perf/test_text_models_perf.py"
+  },
+  "nightly-perf-vlm-2-gpu::test/registered/perf/test_vlms_perf.py": {
     "launches": [
       {
         "kv_cache_gb": 38.808,
@@ -7020,7 +5542,20 @@
       1,
       1
     ],
-    "suite": "nightly-test-vlm-perf-2-gpu-h100",
+    "suite": "nightly-perf-vlm-2-gpu",
     "test_file": "test/registered/perf/test_vlms_perf.py"
+  },
+  "nightly-precision-8-gpu-h200::test/registered/debug_utils/test_nightly_precision_regression.py": {
+    "launches": [
+      {
+        "kv_cache_gb": 0.3861,
+        "token_capacity": 4055
+      }
+    ],
+    "sample_counts": [
+      1
+    ],
+    "suite": "nightly-precision-8-gpu-h200",
+    "test_file": "test/registered/debug_utils/test_nightly_precision_regression.py"
   }
 }
