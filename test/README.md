@@ -107,6 +107,25 @@ This README mostly describes the NVIDIA GPU CI pipeline. Other hardware backends
 - Each GitHub Actions job should take < 30 minutes; split if longer.
 - If tests are too slow for per-commit, consider nightly suites.
 
+## E2E Memory Capacity Guard
+
+CI e2e tests that launch a server via `popen_launch_server` assert that
+KV / hybrid pool capacity has not regressed. After the server is healthy,
+the harness calls `GET /server_info` and compares capacity fields against
+floors in `python/sglang/test/memory_thresholds.json` (key =
+`{suite}::{test_file}`, floors = mean of recent scheduled/nightly logs × 0.99).
+
+To refresh floors after an intentional memory optimization:
+
+```bash
+python3 scripts/ci/utils/update_memory_thresholds.py
+# or from pre-downloaded logs:
+python3 scripts/ci/utils/update_memory_thresholds.py --log-dir /path/to/logs
+```
+
+Disable locally with `SGLANG_CHECK_MEMORY_THRESHOLDS=0`. Force on outside CI with
+`SGLANG_CHECK_MEMORY_THRESHOLDS=1`.
+
 ## Other Notes
 
 ### Adding New Models to Nightly CI

@@ -179,6 +179,14 @@ def run_unittest_files(
 
             cmd = ["python3", full_path, "-f"]
 
+            # Propagate suite/file identity for the e2e memory-capacity guard
+            # (see sglang.test.memory_threshold).
+            child_env = os.environ.copy()
+            suite_name = os.environ.get("SGLANG_TEST_SUITE")
+            if suite_name:
+                child_env["SGLANG_TEST_SUITE"] = suite_name
+            child_env["SGLANG_TEST_FILE"] = filename
+
             if capture_output:
                 # Capture output for retry decision
                 process = subprocess.Popen(
@@ -187,6 +195,7 @@ def run_unittest_files(
                     stderr=subprocess.STDOUT,
                     text=True,
                     errors="ignore",  # Ignore non-UTF-8 bytes to prevent UnicodeDecodeError
+                    env=child_env,
                 )
                 output_lines = []
                 for line in process.stdout:
@@ -194,7 +203,7 @@ def run_unittest_files(
                     output_lines.append(line)
                 process.wait()
             else:
-                process = subprocess.Popen(cmd, stdout=None, stderr=None)
+                process = subprocess.Popen(cmd, stdout=None, stderr=None, env=child_env)
                 process.wait()
 
             elapsed = time.perf_counter() - file_tic

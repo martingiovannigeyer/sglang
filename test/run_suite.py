@@ -364,6 +364,11 @@ def run_a_suite(args):
 
     pretty_print_tests(args, ci_tests, skipped_tests)
 
+    # Propagate suite name so e2e memory-capacity floors (memory_thresholds.json)
+    # can key on suite::test_file. Child test processes inherit this via
+    # run_unittest_files.
+    os.environ["SGLANG_TEST_SUITE"] = suite
+
     # Add extra timeout when retry is enabled
     timeout = args.timeout_per_file
     if args.enable_retry:

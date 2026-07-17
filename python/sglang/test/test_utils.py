@@ -877,6 +877,37 @@ def _wait_for_server_health(
     return False, "Server failed to start within the timeout period"
 
 
+def _maybe_check_server_memory_after_launch(
+    base_url: str, api_key: Optional[str] = None
+) -> None:
+    """Assert KV/pool capacity floors via /server_info (CI memory regression guard)."""
+    try:
+        from sglang.test.memory_threshold import maybe_check_server_memory
+
+        maybe_check_server_memory(base_url, api_key=api_key)
+    except AssertionError:
+        raise
+    except Exception as e:
+        # Never fail a launch on non-regression issues (import, network flake, …).
+        print(f"Memory threshold check skipped: {e}")
+
+
+def _check_memory_or_kill(
+    process: subprocess.Popen,
+    base_url: str,
+    api_key: Optional[str] = None,
+) -> None:
+    """Run memory floor check; kill the server process if it fails."""
+    try:
+        _maybe_check_server_memory_after_launch(base_url, api_key=api_key)
+    except AssertionError:
+        try:
+            kill_process_tree(process.pid)
+        except Exception as e:
+            print(f"Error killing process after memory threshold failure: {e}")
+        raise
+
+
 def popen_launch_server(
     model: str,
     base_url: str,
@@ -1009,6 +1040,7 @@ def popen_launch_server(
 
         if success:
             print("CI_OFFLINE: Online retry succeeded")
+            _check_memory_or_kill(process, base_url, api_key=api_key)
             return process
 
         # Online retry also failed
@@ -1023,6 +1055,7 @@ def popen_launch_server(
 
     # First attempt succeeded or offline was not enabled
     if success:
+        _check_memory_or_kill(process, base_url, api_key=api_key)
         return process
 
     # First attempt failed and offline was not enabled
