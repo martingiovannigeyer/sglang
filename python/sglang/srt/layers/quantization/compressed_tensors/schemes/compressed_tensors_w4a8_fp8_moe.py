@@ -82,9 +82,11 @@ class CompressedTensorsW4AFP8MoE(CompressedTensorsMoEScheme):
         quant_config: CompressedTensorsConfig,
         weight_quant,
         input_quant,
+        quant_format: str | None = None,
     ):
         self.quant_config = quant_config
-        config = self.quant_config.target_scheme_map["Linear"].get("weights")
+        quant_format = quant_format or self.quant_config.quant_format
+        config = weight_quant
         self.num_bits = config.num_bits
         self.packed_factor = 32 // config.num_bits
         self.group_size = config.group_size
@@ -93,8 +95,8 @@ class CompressedTensorsW4AFP8MoE(CompressedTensorsMoEScheme):
 
         assert config.symmetric, "Only symmetric quantization is supported"
         assert (
-            self.quant_config.quant_format == CompressionFormat.pack_quantized.value
-        ), f"W4AFP8MoE requires pack-quantized format, got {self.quant_config.quant_format}"
+            quant_format == CompressionFormat.pack_quantized.value
+        ), f"W4AFP8MoE requires pack-quantized format, got {quant_format}"
 
     @classmethod
     def get_min_capability(cls) -> int:

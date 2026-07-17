@@ -7,13 +7,18 @@ register_cpu_ci(est_time=5, suite="base-a-test-cpu")
 import unittest
 from unittest.mock import Mock, patch
 
+import torch
+
 from sglang.srt.layers.quantization.compressed_tensors.compressed_tensors import (
     CompressedTensorsConfig,
     CompressedTensorsLinearMethod,
 )
 from sglang.srt.layers.quantization.compressed_tensors.schemes import (
     CompressedTensorsW4A4Fp4,
+    CompressedTensorsW4AFP8MoE,
     CompressedTensorsW8A8Fp8,
+    CompressedTensorsWNA16,
+    CompressedTensorsWNA16MoE,
 )
 from sglang.srt.layers.quantization.compressed_tensors.utils import (
     check_equal_or_regex_match,
@@ -125,17 +130,86 @@ class TestCompressedTensorsMixedPrecision(CustomTestCase):
         }
 
         quant_config = CompressedTensorsConfig.from_config(config)
+        scheme_dict = quant_config.target_scheme_map["Linear"]
 
-        self.assertIsNone(quant_config.target_scheme_map["Linear"]["input_activations"])
+        self.assertIsNone(scheme_dict["input_activations"])
+        self.assertEqual(scheme_dict["format"], "pack-quantized")
+        with patch.object(quant_config, "_check_scheme_supported", return_value=True):
+            scheme = quant_config.get_linear_scheme(
+                torch.nn.Linear(1, 1), layer_name="model.linear"
+            )
+        self.assertIsInstance(scheme, CompressedTensorsWNA16)
 
-    def test_ignore_entries_match_exact_names_or_regexes_only(self):
+    def test_selects_weight_only_pack_quantized_moe_group(self):
+        config = _mixed_precision_config()
+        config["config_groups"] = {
+            "weight_only": {
+                "format": "pack-quantized",
+                "targets": [r"re:.*mlp\.experts.*"],
+                "weights": {
+                    "num_bits": 4,
+                    "type": "int",
+                    "symmetric": True,
+                    "strategy": "group",
+                    "group_size": 128,
+                    "dynamic": False,
+                },
+                "input_activations": None,
+            }
+        }
+        quant_config = CompressedTensorsConfig.from_config(config)
+
+        scheme = quant_config.get_moe_scheme(
+            torch.nn.Module(), layer_name="model.layers.0.mlp.experts"
+        )
+
+        self.assertIsInstance(scheme, CompressedTensorsWNA16MoE)
+
+    def test_selects_pack_quantized_w4afp8_moe_group(self):
+        config = _mixed_precision_config()
+        config["config_groups"] = {
+            "w4afp8": {
+                "format": "pack-quantized",
+                "targets": [r"re:.*mlp\.experts.*"],
+                "weights": {
+                    "num_bits": 4,
+                    "type": "int",
+                    "symmetric": True,
+                    "strategy": "group",
+                    "group_size": 128,
+                    "dynamic": False,
+                },
+                "input_activations": {
+                    "num_bits": 8,
+                    "type": "float",
+                    "symmetric": True,
+                    "strategy": "token",
+                    "dynamic": True,
+                },
+            }
+        }
+        quant_config = CompressedTensorsConfig.from_config(config)
+
+        scheme = quant_config.get_moe_scheme(
+            torch.nn.Module(), layer_name="model.layers.0.mlp.experts"
+        )
+
+        self.assertIsInstance(scheme, CompressedTensorsW4AFP8MoE)
+
+    def test_ignore_matching_supports_exact_scoping(self):
         parent = "model.layers.0.linear_attn"
         child = f"{parent}.in_proj_qkv"
 
         self.assertTrue(check_equal_or_regex_match(parent, [parent]))
-        self.assertFalse(check_equal_or_regex_match(child, [parent]))
+        self.assertTrue(check_equal_or_regex_match(child, [parent]))
+        self.assertFalse(
+            check_equal_or_regex_match(child, [parent], check_contains=False)
+        )
         self.assertTrue(check_equal_or_regex_match(child, [r"re:.*in_proj_qkv$"]))
-        self.assertFalse(should_ignore_layer(child, ignore=[parent]))
+        self.assertTrue(should_ignore_layer(child, ignore=[parent]))
+        self.assertFalse(
+            should_ignore_layer(child, ignore=[parent], check_contains=False)
+        )
 
     def test_quantizes_parallel_lm_head_when_targeted(self):
         quant_config = CompressedTensorsConfig.from_config(_mixed_precision_config())

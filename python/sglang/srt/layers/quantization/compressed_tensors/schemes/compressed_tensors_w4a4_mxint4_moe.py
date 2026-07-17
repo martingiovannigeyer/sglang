@@ -49,9 +49,13 @@ if is_flashinfer_available():
 
 class CompressedTensorsMxInt4MoE(CompressedTensorsMoEScheme):
     def __init__(
-        self, quant_config: CompressedTensorsConfig, weight_quant: QuantizationArgs
+        self,
+        quant_config: CompressedTensorsConfig,
+        weight_quant: QuantizationArgs,
+        quant_format: str | None = None,
     ):
         self.quant_config = quant_config
+        quant_format = quant_format or self.quant_config.quant_format
         # Per-layer scheme already resolved by get_moe_scheme(); reuse it directly
         # (mixed-precision MoE has no "Linear" config group to fall back on).
         config = weight_quant
@@ -74,7 +78,7 @@ class CompressedTensorsMxInt4MoE(CompressedTensorsMoEScheme):
         ), "Actorder is not supported by flashinfer_trtllm backend"
         self.moe_ep_rank = get_parallel().moe_ep_rank
 
-        if self.quant_config.quant_format != CompressionFormat.pack_quantized.value:
+        if quant_format != CompressionFormat.pack_quantized.value:
             raise ValueError(
                 f"For Fused MoE layers, only {CompressionFormat.pack_quantized.value} "
                 "is supported for the mxint4"
