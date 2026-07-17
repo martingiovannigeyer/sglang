@@ -164,6 +164,16 @@ class CompressedTensorsConfig(QuantizationConfig):
         prefix: str,
     ) -> Optional[QuantizeMethodBase]:
         from sglang.srt.layers.linear import LinearBase
+        from sglang.srt.layers.vocab_parallel_embedding import ParallelLMHead
+
+        if isinstance(layer, ParallelLMHead):
+            try:
+                scheme = self.get_linear_scheme(layer=layer, layer_name=prefix)
+            except ValueError:
+                scheme = None
+            if scheme is not None:
+                layer.scheme = scheme
+                return CompressedTensorsLinearMethod(self)
 
         if isinstance(layer, LinearBase):
             # If linear_fp8_config is set, use FP8 for linear layers
@@ -305,8 +315,14 @@ class CompressedTensorsConfig(QuantizationConfig):
                 )
 
                 target_scheme_map[target]["input_activations"] = None
-                if is_activation_quantization_format(quant_format):
-                    input_activations = quant_config.get("input_activations")
+                group_format = quant_config.get("format")
+                activation_quantized = (
+                    is_activation_quantization_format(group_format)
+                    if group_format is not None
+                    else is_activation_quantization_format(quant_format)
+                )
+                input_activations = quant_config.get("input_activations")
+                if activation_quantized or input_activations:
                     # When activation quant format is set but no
                     # input_activations provided: valid for w8a16fp8 (FLOAT
                     # weights) and pack-quantized without activation quant
@@ -593,7 +609,9 @@ class CompressedTensorsConfig(QuantizationConfig):
                     "Other method (CompressedTensorsW4A16Sparse24) is not supported now"
                 )
 
-        if is_activation_quantization_format(self.quant_format):
+        if input_quant is not None or is_activation_quantization_format(
+            self.quant_format
+        ):
             if self._is_fp4a4_nvfp4(weight_quant, input_quant):
                 is_fp4a4_nvfp4_supported = self._check_scheme_supported(
                     CompressedTensorsW4A4Fp4.get_min_capability(), error=False
