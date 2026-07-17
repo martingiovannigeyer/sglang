@@ -85,7 +85,7 @@ logger = logging.getLogger(__name__)
 __all__ = ["CompressedTensorsLinearMethod"]
 
 SPARSITY_CONFIG_NAME: Literal["sparsity_config"] = "sparsity_config"
-QUANTIZATION_SCHEME_MAP_TYPE = Dict[str, Optional[Dict[str, QuantizationArgs]]]
+QUANTIZATION_SCHEME_MAP_TYPE = Dict[str, Optional[Dict[str, Any]]]
 
 
 class DeviceCapability(NamedTuple):
@@ -316,6 +316,9 @@ class CompressedTensorsConfig(QuantizationConfig):
 
                 target_scheme_map[target]["input_activations"] = None
                 group_format = quant_config.get("format")
+                target_scheme_map[target]["format"] = (
+                    group_format if group_format is not None else quant_format
+                )
                 activation_quantized = (
                     is_activation_quantization_format(group_format)
                     if group_format is not None
@@ -383,12 +386,18 @@ class CompressedTensorsConfig(QuantizationConfig):
             and is_dynamic
         )
 
-    def _is_wint4afp8(self, weight_quant: BaseModel, input_quant: BaseModel) -> bool:
+    def _is_wint4afp8(
+        self,
+        weight_quant: BaseModel,
+        input_quant: BaseModel,
+        quant_format: Optional[str] = None,
+    ) -> bool:
         """Detect W4AFP8: packed INT4 weights + 8-bit dynamic per-token activations."""
         if weight_quant is None or input_quant is None:
             return False
+        quant_format = quant_format or self.quant_format
         return (
-            self.quant_format == CompressionFormat.pack_quantized.value
+            quant_format == CompressionFormat.pack_quantized.value
             and weight_quant.num_bits == 4
             and weight_quant.type == QuantizationType.INT
             and weight_quant.symmetric
@@ -398,12 +407,18 @@ class CompressedTensorsConfig(QuantizationConfig):
             and input_quant.dynamic  # currently not support static input scales
         )
 
-    def _is_wint4abf16(self, weight_quant: BaseModel, input_quant: BaseModel) -> bool:
+    def _is_wint4abf16(
+        self,
+        weight_quant: BaseModel,
+        input_quant: BaseModel,
+        quant_format: Optional[str] = None,
+    ) -> bool:
         """Detect W4A16: packed INT4 weights with no activation quantization (activations stay BF16)."""
         if weight_quant is None or input_quant is not None:
             return False
+        quant_format = quant_format or self.quant_format
         return (
-            self.quant_format == CompressionFormat.pack_quantized.value
+            quant_format == CompressionFormat.pack_quantized.value
             and weight_quant.num_bits == 4
             and weight_quant.type == QuantizationType.INT
             and weight_quant.symmetric
@@ -588,13 +603,17 @@ class CompressedTensorsConfig(QuantizationConfig):
         return is_w4 and weight_quant.symmetric and is_token and is_dynamic
 
     def _get_scheme_from_parts(
-        self, weight_quant: BaseModel, input_quant: BaseModel
+        self,
+        weight_quant: BaseModel,
+        input_quant: BaseModel,
+        quant_format: Optional[str] = None,
     ) -> CompressedTensorsLinearScheme:
+        quant_format = quant_format or self.quant_format
 
         # Detect If Mixed Precision
         if self._is_wNa16_group_channel(weight_quant, input_quant):
             if (
-                self.quant_format == CompressionFormat.pack_quantized.value
+                quant_format == CompressionFormat.pack_quantized.value
                 and weight_quant.num_bits in WNA16_SUPPORTED_BITS
             ):
                 return CompressedTensorsWNA16(
@@ -609,9 +628,7 @@ class CompressedTensorsConfig(QuantizationConfig):
                     "Other method (CompressedTensorsW4A16Sparse24) is not supported now"
                 )
 
-        if input_quant is not None or is_activation_quantization_format(
-            self.quant_format
-        ):
+        if input_quant is not None or is_activation_quantization_format(quant_format):
             if self._is_fp4a4_nvfp4(weight_quant, input_quant):
                 is_fp4a4_nvfp4_supported = self._check_scheme_supported(
                     CompressedTensorsW4A4Fp4.get_min_capability(), error=False
@@ -719,6 +736,7 @@ class CompressedTensorsConfig(QuantizationConfig):
 
         weight_quant = scheme_dict.get("weights")
         input_quant = scheme_dict.get("input_activations")
+        quant_format = scheme_dict.get("format") or self.quant_format
 
         if self._is_wNa16_group_channel(weight_quant, input_quant):
             if not _is_npu:
@@ -729,11 +747,17 @@ class CompressedTensorsConfig(QuantizationConfig):
                     logger.info_once(
                         "Using CompressedTensorsMxInt4MoE with flashinfer_trtllm backend"
                     )
-                    return CompressedTensorsMxInt4MoE(self, weight_quant=weight_quant)
+                    return CompressedTensorsMxInt4MoE(
+                        self,
+                        weight_quant=weight_quant,
+                        quant_format=quant_format,
+                    )
                 elif _is_hip:
                     logger.info_once("Using CompressedTensorsWNA16TritonMoE (ROCm)")
                     return CompressedTensorsWNA16TritonMoE(
-                        self, weight_quant=weight_quant
+                        self,
+                        weight_quant=weight_quant,
+                        quant_format=quant_format,
                     )
                 else:
                     moe_backend = get_moe_runner_backend()
@@ -743,10 +767,16 @@ class CompressedTensorsConfig(QuantizationConfig):
                             "(moe_runner_backend=triton)"
                         )
                         return CompressedTensorsWNA16TritonMoE(
-                            self, weight_quant=weight_quant
+                            self,
+                            weight_quant=weight_quant,
+                            quant_format=quant_format,
                         )
                     logger.info_once("Using CompressedTensorsWNA16MarlinMoEMethod")
-                    return CompressedTensorsWNA16MoE(self, weight_quant=weight_quant)
+                    return CompressedTensorsWNA16MoE(
+                        self,
+                        weight_quant=weight_quant,
+                        quant_format=quant_format,
+                    )
             else:
                 if (
                     self._is_dynamic_token_w4(weight_quant, input_quant)
@@ -768,13 +798,18 @@ class CompressedTensorsConfig(QuantizationConfig):
                 raise NotImplementedError(
                     f"The W8A8Int8 Fused MoE scheme is implemented only for NPU for now."
                 )
-        elif self._is_wint4afp8(weight_quant, input_quant):
+        elif self._is_wint4afp8(weight_quant, input_quant, quant_format):
             # On NPU prefer the dedicated NPU W4A8Int8 path when activations are INT8.
             if _is_npu and self._is_dynamic_token_w4a8(weight_quant, input_quant):
                 logger.info_once("Using NPUCompressedTensorsW4A8Int8DynamicMoE")
                 return NPUCompressedTensorsW4A8Int8DynamicMoE(self)
             logger.info_once("Using CompressedTensorsW4AFP8MoE")
-            return CompressedTensorsW4AFP8MoE(self, weight_quant, input_quant)
+            return CompressedTensorsW4AFP8MoE(
+                self,
+                weight_quant,
+                input_quant,
+                quant_format=quant_format,
+            )
         elif self._is_dynamic_token_w4a8(weight_quant, input_quant):
             if _is_npu:
                 logger.info_once("Using NPUCompressedTensorsW4A8Int8DynamicMoE")
@@ -814,9 +849,11 @@ class CompressedTensorsConfig(QuantizationConfig):
         scheme_dict = self.get_scheme_dict(layer, layer_name)
         weight_quant = None
         input_quant = None
+        quant_format = self.quant_format
         if scheme_dict:
             weight_quant = scheme_dict.get("weights")
             input_quant = scheme_dict.get("input_activations")
+            quant_format = scheme_dict.get("format") or self.quant_format
 
         # Find the sparsity scheme of the layer
         # assume that fused layers inerhit first component's sparsity scheme
@@ -852,6 +889,7 @@ class CompressedTensorsConfig(QuantizationConfig):
             scheme = self._get_scheme_from_parts(  # type: ignore
                 weight_quant=weight_quant,
                 input_quant=input_quant,
+                quant_format=quant_format,
             )
 
         # Raise error if device does not support the scheme
@@ -876,7 +914,10 @@ class CompressedTensorsConfig(QuantizationConfig):
             } | None
         """
         if should_ignore_layer(
-            layer_name, ignore=self.ignore, fused_mapping=self.packed_modules_mapping
+            layer_name,
+            ignore=self.ignore,
+            fused_mapping=self.packed_modules_mapping,
+            check_contains=False,
         ):
             return None
 

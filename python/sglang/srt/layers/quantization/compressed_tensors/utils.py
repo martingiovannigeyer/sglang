@@ -25,6 +25,8 @@ def should_ignore_layer(
     layer_name: Optional[str],
     ignore: Iterable[str] = tuple(),
     fused_mapping: Mapping[str, List[str]] = MappingProxyType({}),
+    *,
+    check_contains: bool = True,
 ) -> bool:
     if layer_name is None:
         return False
@@ -50,7 +52,9 @@ def should_ignore_layer(
         should_ignore_layer = None
         for shard_name in shard_names:
             should_ignore_shard = check_equal_or_regex_match(
-                layer_name=shard_name, targets=ignore
+                layer_name=shard_name,
+                targets=ignore,
+                check_contains=check_contains,
             )
 
             # If shard_idx=0, set layer ignore to match shard.
@@ -69,19 +73,34 @@ def should_ignore_layer(
     # the safetensors checkpoint already.
     else:
         should_ignore_layer = check_equal_or_regex_match(
-            layer_name=layer_name, targets=ignore
+            layer_name=layer_name,
+            targets=ignore,
+            check_contains=check_contains,
         )
 
     assert should_ignore_layer is not None
     return should_ignore_layer
 
 
-def check_equal_or_regex_match(layer_name: str, targets: Iterable[str]) -> bool:
+def check_equal_or_regex_match(
+    layer_name: str,
+    targets: Iterable[str],
+    *,
+    check_contains: bool = True,
+) -> bool:
     """
-    Checks whether a layer_name is exactly equal or a regex match for
-    if target starts with 're:' to any target in list.
+    Checks whether a layer_name is exactly equal to a target or matches a
+    target prefixed with ``re:``. When ``check_contains`` is true, plain
+    targets also match as case-insensitive substrings.
     """
-    return any(_is_equal_or_regex_match(layer_name, target) for target in targets)
+    return any(
+        _is_equal_or_regex_match(
+            layer_name,
+            target,
+            check_contains=check_contains,
+        )
+        for target in targets
+    )
 
 
 def find_matched_target(
