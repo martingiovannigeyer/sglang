@@ -13,6 +13,7 @@ from sglang.test.test_utils import (
     DEFAULT_TIMEOUT_FOR_SERVER_LAUNCH,
     DEFAULT_URL_FOR_TEST,
     CustomTestCase,
+    _check_memory_or_kill,
     is_in_ci,
     popen_launch_pd_server,
     popen_with_error_check,
@@ -177,6 +178,14 @@ class PDDisaggregationServerBase(CustomTestCase):
     ):
         wait_for_http_ready(url=url, timeout=timeout, process=process)
         print(f"Server {url} is ready")
+        # Prefill/decode sglang workers allocate KV pools; the LB/router does
+        # not. popen_launch_pd_server only spawns (no health wait), so the
+        # memory-capacity guard runs here after the worker is healthy — same
+        # floors that update_memory_thresholds.py mines from PD test logs.
+        if process is None or process is getattr(cls, "process_lb", None):
+            return
+        base_url = url[: -len("/health")] if url.endswith("/health") else url
+        _check_memory_or_kill(process, base_url)
 
     @classmethod
     def tearDownClass(cls):
