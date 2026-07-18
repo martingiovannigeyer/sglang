@@ -605,7 +605,7 @@ class LoRAManager:
 
             if not isinstance(config.target_modules, list):
                 raise ValueError(
-                    f"SGLang currently only supports inferring LoRA target modules when a list of "
+                    "SGLang currently only supports inferring LoRA target modules when a list of "
                     "suffixes is provided in `target_modules` field of PEFT config. Please explicitly "
                     "specify `--lora-target-modules` during server startup. You can specify `all` to "
                     "enable all support modules types. "
@@ -783,6 +783,10 @@ class LoRAManager:
         replace_submodule(self.base_model, module_name, lora_module)
         return lora_module
 
+    def _should_apply_lora(self, module_name: str) -> bool:
+        predicate = getattr(self.base_model, "should_apply_lora", None)
+        return predicate is None or predicate(module_name)
+
     def init_lora_modules(self):
         # Look-up table that essentially maps (layer_index, module_name) to the corresponding LoRA module.
         self.lora_modules: List[Dict[str, BaseLayerWithLoRA]] = [
@@ -846,6 +850,9 @@ class LoRAManager:
                     lora_module = self.set_lora_module(module_name, module)
                     self.lm_head_module = lora_module
                     continue
+
+            if not self._should_apply_lora(module_name):
+                continue
 
             # Handle DeepSeek MLA fused projection: set the boundary
             # between q_a and kv_a output partitions so the LoRA layer

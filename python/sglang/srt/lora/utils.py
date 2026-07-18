@@ -253,6 +253,8 @@ def get_normalized_target_modules(
         "v_proj": "qkv_proj",
         "gate_proj": "gate_up_proj",
         "up_proj": "gate_up_proj",
+        "in_proj_qkv": "in_proj_qkvz",
+        "in_proj_z": "in_proj_qkvz",
         "in_proj_b": "in_proj_ba",
         "in_proj_a": "in_proj_ba",
         "out_proj": "out_proj",
