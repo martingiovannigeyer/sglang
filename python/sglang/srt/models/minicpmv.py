@@ -1374,6 +1374,8 @@ class MiniCPMV4_6(MiniCPMBaseModel):
             "gate_proj",
             "up_proj",
         ],
+        "in_proj_qkvz": ["in_proj_qkv", "in_proj_z"],
+        "in_proj_ba": ["in_proj_b", "in_proj_a"],
     }
     supported_lora_modules = [
         # vision encoder + mid-ViT merger
@@ -1385,6 +1387,8 @@ class MiniCPMV4_6(MiniCPMBaseModel):
         # language model
         "qkv_proj",
         "o_proj",
+        "in_proj_qkvz",
+        "in_proj_ba",
         "gate_up_proj",
         "down_proj",
     ]
@@ -1435,6 +1439,12 @@ class MiniCPMV4_6(MiniCPMBaseModel):
         return Qwen3_5ForCausalLM(
             config=config.text_config, quant_config=quant_config, prefix=prefix
         )
+
+    def get_hidden_dim(self, module_name: str, layer_idx: int):
+        return self.llm.get_hidden_dim(module_name, layer_idx)
+
+    def should_apply_lora(self, module_name: str) -> bool:
+        return module_name.startswith("llm.model.layers.")
 
     def forward(
         self,
