@@ -11,10 +11,12 @@ import torch
 
 from sglang.srt.layers.quantization.compressed_tensors.compressed_tensors import (
     CompressedTensorsConfig,
+    CompressedTensorsFusedMoEMethod,
     CompressedTensorsLinearMethod,
 )
 from sglang.srt.layers.quantization.compressed_tensors.schemes import (
     CompressedTensorsW4A4Fp4,
+    CompressedTensorsW4A4Nvfp4MoE,
     CompressedTensorsW4AFP8MoE,
     CompressedTensorsW8A8Fp8,
     CompressedTensorsWNA16,
@@ -80,6 +82,33 @@ def _mixed_precision_config():
 
 
 class TestCompressedTensorsMixedPrecision(CustomTestCase):
+    def test_nvfp4_moe_uses_backend_specific_w13_load_order(self):
+        scheme = CompressedTensorsW4A4Nvfp4MoE.__new__(
+            CompressedTensorsW4A4Nvfp4MoE
+        )
+
+        scheme.use_flashinfer_trtllm = False
+        self.assertTrue(scheme.load_up_proj_weight_first)
+
+        scheme.use_flashinfer_trtllm = True
+        self.assertFalse(scheme.load_up_proj_weight_first)
+
+    def test_fused_moe_method_exposes_layer_w13_load_order(self):
+        method = CompressedTensorsFusedMoEMethod(Mock())
+        scheme = Mock(load_up_proj_weight_first=True)
+        layer = Mock(scheme=scheme)
+
+        method.create_weights(
+            layer=layer,
+            num_experts=2,
+            hidden_size=16,
+            intermediate_size_per_partition=8,
+            params_dtype=torch.bfloat16,
+        )
+
+        self.assertTrue(method.load_up_proj_weight_first)
+        scheme.create_weights.assert_called_once()
+
     def test_parses_per_group_activation_quantization(self):
         quant_config = CompressedTensorsConfig.from_config(_mixed_precision_config())
 
