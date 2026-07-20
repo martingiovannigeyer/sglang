@@ -52,6 +52,16 @@ class CompressedTensorsW4A4Nvfp4MoE(CompressedTensorsMoEScheme):
         # Requires sm100(blackwell) architecture
         return 100
 
+    @property
+    def load_up_proj_weight_first(self) -> bool:
+        """Use the W13 ordering required by the selected FlashInfer kernel.
+
+        FlashInfer CUTLASS consumes fused gated weights as ``[up, gate]``.
+        The TRT-LLM path consumes ``[gate, up]`` at load time and reorders the
+        tensors, including their block scales, during post-processing below.
+        """
+        return not self.use_flashinfer_trtllm
+
     def create_weights(
         self,
         layer: torch.nn.Module,

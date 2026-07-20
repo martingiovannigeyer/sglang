@@ -1076,6 +1076,7 @@ class CompressedTensorsFusedMoEMethod(FusedMoEMethodBase):
     def __init__(self, quantization_config: CompressedTensorsConfig):
         self.quantization_config = quantization_config
         self.quant_config = quantization_config
+        self.load_up_proj_weight_first = False
 
     def process_weights_after_loading(self, layer: torch.nn.Module) -> None:
         layer.scheme.process_weights_after_loading(layer)
@@ -1094,6 +1095,12 @@ class CompressedTensorsFusedMoEMethod(FusedMoEMethodBase):
         the necessary parameters for the layer. See LinearMethodBase for param
         details
         """
+        # FusedMoE's checkpoint loader reads this flag from the quant method,
+        # while compressed-tensors resolves the backend-specific contract on
+        # the per-layer scheme.
+        self.load_up_proj_weight_first = getattr(
+            layer.scheme, "load_up_proj_weight_first", False
+        )
         layer.scheme.create_weights(
             layer=layer,
             num_experts=num_experts,
