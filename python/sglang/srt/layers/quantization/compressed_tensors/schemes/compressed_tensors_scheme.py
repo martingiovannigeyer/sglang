@@ -68,6 +68,11 @@ class CompressedTensorsMoEScheme(BaseMoEScheme):
     of different quantization schemes supported by CompressedTensors.
     """
 
+    # Fused W13 checkpoint load order: True means [up, gate]. Schemes whose
+    # kernels need the flipped order (e.g. FlashInfer CUTLASS NVFP4) override
+    # this; FusedMoE reads it via the quant method at weight-load time.
+    load_up_proj_weight_first: bool = False
+
     @classmethod
     def get_min_capability(cls) -> int:
         """

@@ -69,8 +69,10 @@ class CompressedTensorsWNA16MoE(CompressedTensorsMoEScheme):
         quant_config: CompressedTensorsConfig,
         weight_quant: QuantizationArgs,
         num_gpu_experts: int = -1,
+        quant_format: str | None = None,
     ):
         self.quant_config = quant_config
+        quant_format = quant_format or self.quant_config.quant_format
         # Per-layer scheme already resolved by get_moe_scheme(); reuse it directly
         # (mixed-precision MoE has no "Linear" config group to fall back on).
         config = weight_quant
@@ -82,7 +84,7 @@ class CompressedTensorsWNA16MoE(CompressedTensorsMoEScheme):
         self.sym = config.symmetric
 
         if not (
-            self.quant_config.quant_format == CompressionFormat.pack_quantized.value
+            quant_format == CompressionFormat.pack_quantized.value
             and self.num_bits in WNA16_SUPPORTED_BITS
         ):
             raise ValueError(
