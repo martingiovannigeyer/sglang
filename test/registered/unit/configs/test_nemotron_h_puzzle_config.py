@@ -1,9 +1,19 @@
-import unittest
+"""CPU regression for NemotronHPuzzleConfig.max_n_routed_experts.
 
-from sglang.srt.configs.nemotron_h import NemotronHPuzzleConfig
+Puzzle checkpoints may omit ``n_routed_experts`` from individual MoE block
+configs; ``max_n_routed_experts`` used to index the key unconditionally and
+raised ``KeyError`` at config-parse time. Blocks without the key must fall
+back to the config-level ``n_routed_experts`` while per-block overrides keep
+taking precedence.
+"""
+
 from sglang.test.ci.ci_register import register_cpu_ci
 
 register_cpu_ci(est_time=1, suite="base-a-test-cpu")
+
+import unittest
+
+from sglang.srt.configs.nemotron_h import NemotronHPuzzleConfig
 
 
 class TestNemotronHPuzzleConfig(unittest.TestCase):
