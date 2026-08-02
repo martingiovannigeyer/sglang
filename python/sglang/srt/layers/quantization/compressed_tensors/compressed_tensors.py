@@ -167,13 +167,17 @@ class CompressedTensorsConfig(QuantizationConfig):
         from sglang.srt.layers.vocab_parallel_embedding import ParallelLMHead
 
         if isinstance(layer, ParallelLMHead):
-            try:
+            # Quantize the LM head only when the config explicitly targets it.
+            # Suppress only the "no matching target" ValueError from
+            # find_matched_target; scheme-construction errors must propagate.
+            scheme_dict = None
+            with suppress(ValueError):
+                scheme_dict = self.get_scheme_dict(layer, layer_name=prefix)
+            if scheme_dict is not None:
                 scheme = self.get_linear_scheme(layer=layer, layer_name=prefix)
-            except ValueError:
-                scheme = None
-            if scheme is not None:
-                layer.scheme = scheme
-                return CompressedTensorsLinearMethod(self)
+                if scheme is not None:
+                    layer.scheme = scheme
+                    return CompressedTensorsLinearMethod(self)
 
         if isinstance(layer, LinearBase):
             # If linear_fp8_config is set, use FP8 for linear layers
@@ -1098,9 +1102,7 @@ class CompressedTensorsFusedMoEMethod(FusedMoEMethodBase):
         # FusedMoE's checkpoint loader reads this flag from the quant method,
         # while compressed-tensors resolves the backend-specific contract on
         # the per-layer scheme.
-        self.load_up_proj_weight_first = getattr(
-            layer.scheme, "load_up_proj_weight_first", False
-        )
+        self.load_up_proj_weight_first = layer.scheme.load_up_proj_weight_first
         layer.scheme.create_weights(
             layer=layer,
             num_experts=num_experts,
