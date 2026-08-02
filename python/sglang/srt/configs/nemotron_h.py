@@ -550,7 +550,7 @@ class NemotronHPuzzleConfig(NemotronHConfig):
     @property
     def max_n_routed_experts(self) -> int:
         block_n_routed_experts = [
-            block["n_routed_experts"]
+            block.get("n_routed_experts", self.n_routed_experts)
             for block in self.block_configs
             if block["block_type"] == "moe"
         ]
