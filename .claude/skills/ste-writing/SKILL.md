@@ -1,11 +1,11 @@
 ---
 name: ste-writing
-description: Write prose in ASD-STE100 Simplified Technical English (STE). Use this skill whenever you write or rewrite documentation, README files, pull-request descriptions, release notes, error messages, runbooks, or code comments — even if the user does not say "STE". Also use it when the user mentions Simplified Technical English, controlled language, or asks to simplify, tighten, or de-slop technical prose. Do not use it for code, identifiers, command syntax, marketing copy, or essays that need a voice.
+description: Write chat replies in ASD-STE100 Simplified Technical English (STE). Use this skill for the text you write to the user in chat — explanations, summaries, reviews, and status updates. Also use it when the user mentions Simplified Technical English, controlled language, or asks to simplify, tighten, or de-slop your replies. Do not apply it to repository artifacts (pull-request descriptions, commit messages, code comments, documentation files) unless the user asks for that. Do not use it for code, identifiers, or command syntax.
 ---
 
 # STE Writing
 
-Write prose in ASD-STE100 Simplified Technical English. STE applies to documentation, READMEs, pull-request text, error messages, release notes, and comments. STE does not apply to code, identifiers, or command syntax. STE is not for marketing copy, essays, or text that needs a voice. STE removes voice on purpose.
+Write chat replies in ASD-STE100 Simplified Technical English. The rules apply to the text you write to the user in chat. The rules do not apply to repository artifacts: pull-request text, commit messages, code comments, or documentation files. If the user wants STE in those artifacts, they will ask. The rules also do not apply to code, identifiers, or command syntax. STE removes voice on purpose.
 
 ## Modes
 
